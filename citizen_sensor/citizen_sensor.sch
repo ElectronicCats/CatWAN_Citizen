@@ -55,12 +55,12 @@ $EndComp
 $Comp
 L RF_AM_FM:RFM95W-868S2 U?
 U 1 1 5C48B732
-P 1840 4570
-F 0 "U?" H 1840 5248 50  0000 C CNN
-F 1 "RFM95W-868S2" H 1840 5157 50  0000 C CNN
-F 2 "" H -1460 6220 50  0001 C CNN
-F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H -1460 6220 50  0001 C CNN
-	1    1840 4570
+P 9080 5000
+F 0 "U?" H 8750 5460 50  0000 C CNN
+F 1 "RFM95W-868S2" H 8590 4400 50  0000 C CNN
+F 2 "" H 5780 6650 50  0001 C CNN
+F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 5780 6650 50  0001 C CNN
+	1    9080 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -77,13 +77,13 @@ $EndComp
 $Comp
 L Sensor:BME280 U?
 U 1 1 5C48BD79
-P 5610 6460
-F 0 "U?" H 5180 6506 50  0000 R CNN
-F 1 "BME280" H 5180 6415 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 5610 6260 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 5610 6260 50  0001 C CNN
-	1    5610 6460
-	1    0    0    -1  
+P 4510 4300
+F 0 "U?" V 4040 4620 50  0000 R CNN
+F 1 "BME280" V 4040 4180 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4510 4100 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4510 4100 50  0001 C CNN
+	1    4510 4300
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector:USB_B J?
@@ -99,46 +99,46 @@ $EndComp
 $Comp
 L Device:Antenna_Shield AE?
 U 1 1 5C48C2A7
-P 4080 4040
-F 0 "AE?" H 4220 4081 50  0000 L CNN
-F 1 "Antenna_Shield" H 4220 3990 50  0000 L CNN
-F 2 "" H 4080 4140 50  0001 C CNN
-F 3 "~" H 4080 4140 50  0001 C CNN
-	1    4080 4040
+P 9860 4380
+F 0 "AE?" H 10000 4421 50  0000 L CNN
+F 1 "Antenna_Shield" H 10000 4330 50  0000 L CNN
+F 2 "" H 9860 4480 50  0001 C CNN
+F 3 "~" H 9860 4480 50  0001 C CNN
+	1    9860 4380
 	1    0    0    -1  
 $EndComp
 $Comp
 L electroniccats:VEML6075 U?
 U 1 1 5C48D32D
-P 8669 5335
-F 0 "U?" H 8669 5576 50  0000 C CNN
-F 1 "VEML6075" H 8669 5075 50  0000 C CNN
-F 2 "" H 8669 5335 50  0001 C CNN
-F 3 "" H 8669 5335 50  0001 C CNN
-	1    8669 5335
+P 1560 4540
+F 0 "U?" H 1560 4781 50  0000 C CNN
+F 1 "VEML6075" H 1560 4280 50  0000 C CNN
+F 2 "" H 1560 4540 50  0001 C CNN
+F 3 "" H 1560 4540 50  0001 C CNN
+	1    1560 4540
 	1    0    0    -1  
 $EndComp
 $Comp
 L electroniccats:MICS-4514 U?
 U 1 1 5C48BCB3
-P 1780 7090
-F 0 "U?" H 1780 7557 50  0000 C CNN
-F 1 "MICS-4514" H 1780 7466 50  0000 C CNN
-F 2 "MICS_10-SMD" H 1730 6790 50  0001 L BNN
-F 3 "None" H 1730 6790 50  0001 L BNN
-F 4 "None" H 1730 6790 50  0001 L BNN "Field5"
-	1    1780 7090
+P 1690 6800
+F 0 "U?" H 1690 7267 50  0000 C CNN
+F 1 "MICS-4514" H 1690 7176 50  0000 C CNN
+F 2 "MICS_10-SMD" H 1640 6500 50  0001 L BNN
+F 3 "None" H 1640 6500 50  0001 L BNN
+F 4 "None" H 1640 6500 50  0001 L BNN "Field5"
+	1    1690 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x02_Female J?
 U 1 1 5C48C861
-P 3380 7050
-F 0 "J?" H 3407 7026 50  0000 L CNN
-F 1 "POM-3044P-R" H 3407 6935 50  0000 L CNN
-F 2 "" H 3380 7050 50  0001 C CNN
-F 3 "~" H 3380 7050 50  0001 C CNN
-	1    3380 7050
+P 3990 6680
+F 0 "J?" H 4017 6656 50  0000 L CNN
+F 1 "POM-3044P-R" H 4017 6565 50  0000 L CNN
+F 2 "" H 3990 6680 50  0001 C CNN
+F 3 "~" H 3990 6680 50  0001 C CNN
+	1    3990 6680
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -835,4 +835,140 @@ Wire Wire Line
 	1030 2640 1030 2680
 Wire Notes Line
 	470  3600 11200 3600
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4E30EB
+P 9080 4400
+F 0 "#PWR?" H 9080 4250 50  0001 C CNN
+F 1 "+3.3V" H 9095 4573 50  0000 C CNN
+F 2 "" H 9080 4400 50  0001 C CNN
+F 3 "" H 9080 4400 50  0001 C CNN
+	1    9080 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4E38A3
+P 9080 5700
+F 0 "#PWR?" H 9080 5450 50  0001 C CNN
+F 1 "GND" H 9085 5527 50  0000 C CNN
+F 2 "" H 9080 5700 50  0001 C CNN
+F 3 "" H 9080 5700 50  0001 C CNN
+	1    9080 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8980 5600 8980 5700
+Wire Wire Line
+	8980 5700 9080 5700
+Wire Wire Line
+	9180 5600 9180 5700
+Wire Wire Line
+	9180 5700 9080 5700
+Connection ~ 9080 5700
+Wire Wire Line
+	9080 5600 9080 5700
+Wire Wire Line
+	9580 4700 9860 4700
+Wire Wire Line
+	9860 4700 9860 4580
+Wire Wire Line
+	9080 4400 9080 4500
+$Comp
+L Device:C_Small C?
+U 1 1 5C4F27C7
+P 7780 4990
+F 0 "C?" H 7872 5036 50  0000 L CNN
+F 1 "C_Small" H 7872 4945 50  0000 L CNN
+F 2 "" H 7780 4990 50  0001 C CNN
+F 3 "~" H 7780 4990 50  0001 C CNN
+	1    7780 4990
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4F28F1
+P 7780 5210
+F 0 "#PWR?" H 7780 4960 50  0001 C CNN
+F 1 "GND" H 7785 5037 50  0000 C CNN
+F 2 "" H 7780 5210 50  0001 C CNN
+F 3 "" H 7780 5210 50  0001 C CNN
+	1    7780 5210
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4F2997
+P 7780 4830
+F 0 "#PWR?" H 7780 4680 50  0001 C CNN
+F 1 "+3.3V" H 7795 5003 50  0000 C CNN
+F 2 "" H 7780 4830 50  0001 C CNN
+F 3 "" H 7780 4830 50  0001 C CNN
+	1    7780 4830
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7780 4830 7780 4890
+Wire Wire Line
+	7780 5090 7780 5210
+$Comp
+L power:GND #PWR?
+U 1 1 5C4F90B3
+P 9960 4720
+F 0 "#PWR?" H 9960 4470 50  0001 C CNN
+F 1 "GND" H 9965 4547 50  0000 C CNN
+F 2 "" H 9960 4720 50  0001 C CNN
+F 3 "" H 9960 4720 50  0001 C CNN
+	1    9960 4720
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9960 4580 9960 4720
+Wire Notes Line
+	6970 6530 6970 3600
+Text Label 8580 4700 2    50   ~ 0
+SCK
+Text Label 8580 4800 2    50   ~ 0
+MOSI
+Text Label 8580 4900 2    50   ~ 0
+MISO
+Text Label 8580 5000 2    50   ~ 0
+SS
+Text Label 8580 5200 2    50   ~ 0
+RFM_RST
+Text Label 9580 4900 0    50   ~ 0
+DIO5
+Text Label 9580 5200 0    50   ~ 0
+DIO2
+Text Label 9580 5300 0    50   ~ 0
+DIO1
+NoConn ~ 9580 5000
+NoConn ~ 9580 5100
+Text Label 9580 5400 0    50   ~ 0
+DIO0
+Text Notes 7000 3680 0    50   ~ 0
+Modulation LoRa\n
+Text Label 7300 2100 2    50   ~ 0
+DIO0
+Text Label 8700 2100 0    50   ~ 0
+DIO2
+Text Label 8700 2200 0    50   ~ 0
+D+
+Text Label 8700 2300 0    50   ~ 0
+D-
+Text Label 8700 2400 0    50   ~ 0
+DIO1
+Text Label 8700 2500 0    50   ~ 0
+MISO
+Text Label 8700 2800 0    50   ~ 0
+SS
+Text Label 8700 2600 0    50   ~ 0
+SCK
+Text Label 8700 2700 0    50   ~ 0
+MOSI
+Text Label 8700 2900 0    50   ~ 0
+RFM_RST
+Text Label 8700 3000 0    50   ~ 0
+DIO5
+NoConn ~ 8700 2000
 $EndSCHEMATC
