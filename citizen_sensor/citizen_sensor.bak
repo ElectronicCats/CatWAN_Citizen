@@ -1,0 +1,374 @@
+EESchema Schematic File Version 4
+LIBS:citizen_sensor-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Citizen_sensor"
+Date ""
+Rev "Rocio Rdz."
+Comp "Electronic Cats"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L electroniccats:ATSAMD21E18A-MU U?
+U 1 1 5C4786DA
+P 8000 2300
+F 0 "U?" H 8000 3667 50  0000 C CNN
+F 1 "ATSAMD21E18A-MU" H 8000 3576 50  0000 C CNN
+F 2 "QFN50P500X500X100-33N" H 8000 2300 50  0001 L BNN
+F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 8000 2300 50  0001 L BNN
+F 4 "ATSAMD21E18A-MU-ND" H 8000 2300 50  0001 L BNN "Field4"
+F 5 "https://www.digikey.com.mx/product-detail/en/microchip-technology/ATSAMD21E18A-MU/ATSAMD21E18A-MU-ND/4935887?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 8000 2300 50  0001 L BNN "Field5"
+F 6 "Microchip" H 8000 2300 50  0001 L BNN "Field6"
+F 7 "ATSAMD21E18A-MU" H 8000 2300 50  0001 L BNN "Field7"
+F 8 "QFN-32 Microchip" H 8000 2300 50  0001 L BNN "Field8"
+	1    8000 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPST_x2 SW?
+U 1 1 5C478B86
+P 7000 1600
+F 0 "SW?" H 7000 1835 50  0000 C CNN
+F 1 "RST" H 7009 1470 50  0000 C CNN
+F 2 "" H 7000 1600 50  0001 C CNN
+F 3 "" H 7000 1600 50  0001 C CNN
+	1    7000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C478CF1
+P 9200 1800
+F 0 "C?" H 9292 1846 50  0000 L CNN
+F 1 "0.1uf" H 9292 1755 50  0000 L CNN
+F 2 "" H 9200 1800 50  0001 C CNN
+F 3 "~" H 9200 1800 50  0001 C CNN
+	1    9200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_AM_FM:RFM95W-868S2 U?
+U 1 1 5C48B732
+P 1373 3700
+F 0 "U?" H 1373 4378 50  0000 C CNN
+F 1 "RFM95W-868S2" H 1373 4287 50  0000 C CNN
+F 2 "" H -1927 5350 50  0001 C CNN
+F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H -1927 5350 50  0001 C CNN
+	1    1373 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C48B93D
+P 2000 1400
+F 0 "D?" H 1991 1616 50  0000 C CNN
+F 1 "ON" H 1991 1525 50  0000 C CNN
+F 2 "" H 2000 1400 50  0001 C CNN
+F 3 "~" H 2000 1400 50  0001 C CNN
+	1    2000 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C48B9DB
+P 3600 2900
+F 0 "R?" H 3670 2946 50  0000 L CNN
+F 1 "R" H 3670 2855 50  0000 L CNN
+F 2 "" V 3530 2900 50  0001 C CNN
+F 3 "~" H 3600 2900 50  0001 C CNN
+	1    3600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:BME280 U?
+U 1 1 5C48BD79
+P 6085 5541
+F 0 "U?" H 5655 5587 50  0000 R CNN
+F 1 "BME280" H 5655 5496 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 6085 5341 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 6085 5341 50  0001 C CNN
+	1    6085 5541
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5C48BF75
+P 1015 1305
+F 0 "J?" H 1070 1772 50  0000 C CNN
+F 1 "USB_B_Micro" H 1070 1681 50  0000 C CNN
+F 2 "" H 1165 1255 50  0001 C CNN
+F 3 "~" H 1165 1255 50  0001 C CNN
+	1    1015 1305
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Antenna_Shield AE?
+U 1 1 5C48C2A7
+P 1456 2779
+F 0 "AE?" H 1596 2820 50  0000 L CNN
+F 1 "Antenna_Shield" H 1596 2729 50  0000 L CNN
+F 2 "" H 1456 2879 50  0001 C CNN
+F 3 "~" H 1456 2879 50  0001 C CNN
+	1    1456 2779
+	1    0    0    -1  
+$EndComp
+$Comp
+L electroniccats:VEML6075 U?
+U 1 1 5C48D32D
+P 8669 5335
+F 0 "U?" H 8669 5576 50  0000 C CNN
+F 1 "VEML6075" H 8669 5075 50  0000 C CNN
+F 2 "" H 8669 5335 50  0001 C CNN
+F 3 "" H 8669 5335 50  0001 C CNN
+	1    8669 5335
+	1    0    0    -1  
+$EndComp
+$Comp
+L electroniccats:MICS-4514 U?
+U 1 1 5C48BCB3
+P 1781 5755
+F 0 "U?" H 1781 6222 50  0000 C CNN
+F 1 "MICS-4514" H 1781 6131 50  0000 C CNN
+F 2 "MICS_10-SMD" H 1731 5455 50  0001 L BNN
+F 3 "None" H 1731 5455 50  0001 L BNN
+F 4 "None" H 1731 5455 50  0001 L BNN "Field5"
+	1    1781 5755
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5C48C861
+P 3664 5552
+F 0 "J?" H 3691 5528 50  0000 L CNN
+F 1 "POM-3044P-R" H 3691 5437 50  0000 L CNN
+F 2 "" H 3664 5552 50  0001 C CNN
+F 3 "~" H 3664 5552 50  0001 C CNN
+	1    3664 5552
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C48E530
+P 9600 1800
+F 0 "C?" H 9692 1846 50  0000 L CNN
+F 1 "1uf" H 9692 1755 50  0000 L CNN
+F 2 "" H 9600 1800 50  0001 C CNN
+F 3 "~" H 9600 1800 50  0001 C CNN
+	1    9600 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Counter_Clockwise J?
+U 1 1 5C48E904
+P 9900 2800
+F 0 "J?" H 9950 3017 50  0000 C CNN
+F 1 "PROG" H 9950 2926 50  0000 C CNN
+F 2 "" H 9900 2800 50  0001 C CNN
+F 3 "~" H 9900 2800 50  0001 C CNN
+	1    9900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C48E980
+P 6200 1800
+F 0 "C?" H 6292 1846 50  0000 L CNN
+F 1 "0.1uf" H 6292 1755 50  0000 L CNN
+F 2 "" H 6200 1800 50  0001 C CNN
+F 3 "~" H 6200 1800 50  0001 C CNN
+	1    6200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C48F365
+P 9000 1300
+F 0 "#PWR?" H 9000 1050 50  0001 C CNN
+F 1 "GND" H 9005 1127 50  0000 C CNN
+F 2 "" H 9000 1300 50  0001 C CNN
+F 3 "" H 9000 1300 50  0001 C CNN
+	1    9000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C48F3AC
+P 9400 1400
+F 0 "#PWR?" H 9400 1250 50  0001 C CNN
+F 1 "+3.3V" H 9415 1573 50  0000 C CNN
+F 2 "" H 9400 1400 50  0001 C CNN
+F 3 "" H 9400 1400 50  0001 C CNN
+	1    9400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C48FB6B
+P 6700 1700
+F 0 "#PWR?" H 6700 1450 50  0001 C CNN
+F 1 "GND" H 6705 1527 50  0000 C CNN
+F 2 "" H 6700 1700 50  0001 C CNN
+F 3 "" H 6700 1700 50  0001 C CNN
+	1    6700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C490259
+P 9400 2100
+F 0 "#PWR?" H 9400 1850 50  0001 C CNN
+F 1 "GND" H 9405 1927 50  0000 C CNN
+F 2 "" H 9400 2100 50  0001 C CNN
+F 3 "" H 9400 2100 50  0001 C CNN
+	1    9400 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 1900 9200 2100
+Wire Wire Line
+	9200 2100 9400 2100
+Wire Wire Line
+	9600 1900 9600 2100
+Wire Wire Line
+	9600 2100 9400 2100
+Connection ~ 9400 2100
+Wire Wire Line
+	8700 1300 8800 1300
+Wire Wire Line
+	8800 1300 8800 1400
+Wire Wire Line
+	8800 1600 9200 1600
+Wire Wire Line
+	9600 1600 9600 1700
+Wire Wire Line
+	8700 1400 8800 1400
+Connection ~ 8800 1400
+Wire Wire Line
+	8800 1400 8800 1600
+Wire Wire Line
+	9200 1700 9200 1600
+Connection ~ 9200 1600
+Wire Wire Line
+	9200 1600 9400 1600
+Wire Wire Line
+	9400 1400 9400 1600
+Connection ~ 9400 1600
+Wire Wire Line
+	9400 1600 9600 1600
+Wire Wire Line
+	8700 1200 9000 1200
+Wire Wire Line
+	9000 1200 9000 1300
+Wire Wire Line
+	7300 1600 7200 1600
+Wire Wire Line
+	6800 1600 6700 1600
+Wire Wire Line
+	6700 1600 6700 1700
+$Comp
+L power:GND #PWR?
+U 1 1 5C490B48
+P 8900 3300
+F 0 "#PWR?" H 8900 3050 50  0001 C CNN
+F 1 "GND" H 8905 3127 50  0000 C CNN
+F 2 "" H 8900 3300 50  0001 C CNN
+F 3 "" H 8900 3300 50  0001 C CNN
+	1    8900 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3100 8900 3100
+Wire Wire Line
+	8900 3100 8900 3200
+Wire Wire Line
+	8700 3200 8900 3200
+Connection ~ 8900 3200
+Wire Wire Line
+	8900 3200 8900 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5C490FAA
+P 9500 3000
+F 0 "#PWR?" H 9500 2750 50  0001 C CNN
+F 1 "GND" H 9505 2827 50  0000 C CNN
+F 2 "" H 9500 3000 50  0001 C CNN
+F 3 "" H 9500 3000 50  0001 C CNN
+	1    9500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4910CE
+P 9500 2700
+F 0 "#PWR?" H 9500 2550 50  0001 C CNN
+F 1 "+3.3V" H 9515 2873 50  0000 C CNN
+F 2 "" H 9500 2700 50  0001 C CNN
+F 3 "" H 9500 2700 50  0001 C CNN
+	1    9500 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 2700 9500 2800
+Wire Wire Line
+	9500 2800 9700 2800
+Wire Wire Line
+	9700 2900 9500 2900
+Wire Wire Line
+	9500 2900 9500 3000
+Text Label 10400 2700 0    50   ~ 0
+SWDIO
+Text Label 10400 3000 0    50   ~ 0
+SWCLK
+Wire Wire Line
+	10200 2800 10400 2800
+Wire Wire Line
+	10400 2800 10400 2700
+Wire Wire Line
+	10200 2900 10400 2900
+Wire Wire Line
+	10400 2900 10400 3000
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4924DA
+P 6200 1600
+F 0 "#PWR?" H 6200 1450 50  0001 C CNN
+F 1 "+3.3V" H 6215 1773 50  0000 C CNN
+F 2 "" H 6200 1600 50  0001 C CNN
+F 3 "" H 6200 1600 50  0001 C CNN
+	1    6200 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C492535
+P 6200 2000
+F 0 "#PWR?" H 6200 1750 50  0001 C CNN
+F 1 "GND" H 6205 1827 50  0000 C CNN
+F 2 "" H 6200 2000 50  0001 C CNN
+F 3 "" H 6200 2000 50  0001 C CNN
+	1    6200 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1600 6200 1700
+Wire Wire Line
+	6200 1900 6200 2000
+Wire Notes Line
+	5900 500  5900 3600
+Wire Notes Line
+	5900 3600 11200 3600
+Text Label 8800 1800 0    50   ~ 0
+SWDIO
+Text Label 8800 1900 0    50   ~ 0
+SWCLK
+Wire Wire Line
+	8700 1800 8800 1800
+Wire Wire Line
+	8700 1900 8800 1900
+$EndSCHEMATC
