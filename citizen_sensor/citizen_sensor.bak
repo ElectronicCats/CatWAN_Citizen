@@ -77,12 +77,12 @@ $EndComp
 $Comp
 L Sensor:BME280 U?
 U 1 1 5C48BD79
-P 4510 4300
-F 0 "U?" V 4040 4620 50  0000 R CNN
-F 1 "BME280" V 4040 4180 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4510 4100 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4510 4100 50  0001 C CNN
-	1    4510 4300
+P 5220 4660
+F 0 "U?" V 4750 4980 50  0000 R CNN
+F 1 "BME280" V 4750 4540 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 5220 4460 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 5220 4460 50  0001 C CNN
+	1    5220 4660
 	0    1    1    0   
 $EndComp
 $Comp
@@ -133,12 +133,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Female J?
 U 1 1 5C48C861
-P 3990 6680
-F 0 "J?" H 4017 6656 50  0000 L CNN
-F 1 "POM-3044P-R" H 4017 6565 50  0000 L CNN
-F 2 "" H 3990 6680 50  0001 C CNN
-F 3 "~" H 3990 6680 50  0001 C CNN
-	1    3990 6680
+P 5030 6830
+F 0 "J?" H 5057 6806 50  0000 L CNN
+F 1 "POM-3044P-R" H 5057 6715 50  0000 L CNN
+F 2 "" H 5030 6830 50  0001 C CNN
+F 3 "~" H 5030 6830 50  0001 C CNN
+	1    5030 6830
 	1    0    0    -1  
 $EndComp
 $Comp
