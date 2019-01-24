@@ -77,12 +77,12 @@ $EndComp
 $Comp
 L Sensor:BME280 U?
 U 1 1 5C48BD79
-P 5220 4660
-F 0 "U?" V 4750 4980 50  0000 R CNN
-F 1 "BME280" V 4750 4540 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 5220 4460 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 5220 4460 50  0001 C CNN
-	1    5220 4660
+P 5770 4510
+F 0 "U?" V 5300 4830 50  0000 R CNN
+F 1 "BME280" V 5300 4390 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 5770 4310 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 5770 4310 50  0001 C CNN
+	1    5770 4510
 	0    1    1    0   
 $EndComp
 $Comp
@@ -110,12 +110,12 @@ $EndComp
 $Comp
 L electroniccats:VEML6075 U?
 U 1 1 5C48D32D
-P 1560 4540
-F 0 "U?" H 1560 4781 50  0000 C CNN
-F 1 "VEML6075" H 1560 4280 50  0000 C CNN
-F 2 "" H 1560 4540 50  0001 C CNN
-F 3 "" H 1560 4540 50  0001 C CNN
-	1    1560 4540
+P 2210 4520
+F 0 "U?" H 2210 4761 50  0000 C CNN
+F 1 "VEML6075" H 2210 4260 50  0000 C CNN
+F 2 "" H 2210 4520 50  0001 C CNN
+F 3 "" H 2210 4520 50  0001 C CNN
+	1    2210 4520
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -947,7 +947,7 @@ NoConn ~ 9580 5100
 Text Label 9580 5400 0    50   ~ 0
 DIO0
 Text Notes 7000 3680 0    50   ~ 0
-Modulation LoRa\n
+Module LoRa\n
 Text Label 7300 2100 2    50   ~ 0
 DIO0
 Text Label 8700 2100 0    50   ~ 0
@@ -971,4 +971,189 @@ RFM_RST
 Text Label 8700 3000 0    50   ~ 0
 DIO5
 NoConn ~ 8700 2000
+$Comp
+L Device:R R?
+U 1 1 5C4A3DDF
+P 720 4230
+F 0 "R?" H 790 4276 50  0000 L CNN
+F 1 "1k" H 790 4185 50  0000 L CNN
+F 2 "" V 650 4230 50  0001 C CNN
+F 3 "~" H 720 4230 50  0001 C CNN
+	1    720  4230
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C4A3EFB
+P 720 4650
+F 0 "D?" V 758 4533 50  0000 R CNN
+F 1 "Light ON" V 680 4560 50  0000 R CNN
+F 2 "" H 720 4650 50  0001 C CNN
+F 3 "~" H 720 4650 50  0001 C CNN
+	1    720  4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C4A4072
+P 1300 4520
+F 0 "C?" H 1392 4566 50  0000 L CNN
+F 1 "0.1uf" H 1392 4475 50  0000 L CNN
+F 2 "" H 1300 4520 50  0001 C CNN
+F 3 "~" H 1300 4520 50  0001 C CNN
+	1    1300 4520
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C4AE0AA
+P 2680 4130
+F 0 "R?" H 2750 4176 50  0000 L CNN
+F 1 "2.2k" H 2750 4085 50  0000 L CNN
+F 2 "" V 2610 4130 50  0001 C CNN
+F 3 "~" H 2680 4130 50  0001 C CNN
+	1    2680 4130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C4AE188
+P 2960 4130
+F 0 "R?" H 3030 4176 50  0000 L CNN
+F 1 "2.2k" H 3030 4085 50  0000 L CNN
+F 2 "" V 2890 4130 50  0001 C CNN
+F 3 "~" H 2960 4130 50  0001 C CNN
+	1    2960 4130
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4AE8E4
+P 1300 4700
+F 0 "#PWR?" H 1300 4450 50  0001 C CNN
+F 1 "GND" H 1305 4527 50  0000 C CNN
+F 2 "" H 1300 4700 50  0001 C CNN
+F 3 "" H 1300 4700 50  0001 C CNN
+	1    1300 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4AE935
+P 720 4910
+F 0 "#PWR?" H 720 4660 50  0001 C CNN
+F 1 "GND" H 725 4737 50  0000 C CNN
+F 2 "" H 720 4910 50  0001 C CNN
+F 3 "" H 720 4910 50  0001 C CNN
+	1    720  4910
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4AE986
+P 1720 4700
+F 0 "#PWR?" H 1720 4450 50  0001 C CNN
+F 1 "GND" H 1725 4527 50  0000 C CNN
+F 2 "" H 1720 4700 50  0001 C CNN
+F 3 "" H 1720 4700 50  0001 C CNN
+	1    1720 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4B20BE
+P 720 3990
+F 0 "#PWR?" H 720 3840 50  0001 C CNN
+F 1 "+3.3V" H 735 4163 50  0000 C CNN
+F 2 "" H 720 3990 50  0001 C CNN
+F 3 "" H 720 3990 50  0001 C CNN
+	1    720  3990
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4B210F
+P 1300 4320
+F 0 "#PWR?" H 1300 4170 50  0001 C CNN
+F 1 "+3.3V" H 1315 4493 50  0000 C CNN
+F 2 "" H 1300 4320 50  0001 C CNN
+F 3 "" H 1300 4320 50  0001 C CNN
+	1    1300 4320
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4B2160
+P 1720 4320
+F 0 "#PWR?" H 1720 4170 50  0001 C CNN
+F 1 "+3.3V" H 1735 4493 50  0000 C CNN
+F 2 "" H 1720 4320 50  0001 C CNN
+F 3 "" H 1720 4320 50  0001 C CNN
+	1    1720 4320
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C4B21B1
+P 2820 3860
+F 0 "#PWR?" H 2820 3710 50  0001 C CNN
+F 1 "+3.3V" H 2835 4033 50  0000 C CNN
+F 2 "" H 2820 3860 50  0001 C CNN
+F 3 "" H 2820 3860 50  0001 C CNN
+	1    2820 3860
+	1    0    0    -1  
+$EndComp
+Text Label 3180 4420 0    50   ~ 0
+SDA
+Text Label 3180 4600 0    50   ~ 0
+SCL
+Text Notes 510  3710 0    50   ~ 0
+Light Sensor
+Wire Wire Line
+	720  3990 720  4080
+Wire Wire Line
+	720  4380 720  4500
+Wire Wire Line
+	720  4800 720  4910
+Wire Wire Line
+	1300 4620 1300 4700
+Wire Wire Line
+	1300 4420 1300 4320
+Wire Wire Line
+	1720 4320 1720 4420
+Wire Wire Line
+	1720 4420 1810 4420
+Wire Wire Line
+	1720 4700 1720 4600
+Wire Wire Line
+	1720 4600 1810 4600
+Wire Wire Line
+	2610 4420 2680 4420
+Wire Wire Line
+	2610 4600 2960 4600
+Wire Wire Line
+	2680 4280 2680 4420
+Connection ~ 2680 4420
+Wire Wire Line
+	2680 4420 3180 4420
+Wire Wire Line
+	2960 4280 2960 4600
+Connection ~ 2960 4600
+Wire Wire Line
+	2960 4600 3180 4600
+Wire Wire Line
+	2960 3980 2960 3860
+Wire Wire Line
+	2960 3860 2820 3860
+Wire Wire Line
+	2680 3980 2680 3860
+Wire Wire Line
+	2680 3860 2820 3860
+Connection ~ 2820 3860
+Text Notes 970  3970 0    50   ~ 0
+7-bit Unshifted I2C Address 0x10
+Wire Notes Line
+	470  5120 3730 5120
+Wire Notes Line
+	3730 5120 3730 3600
 $EndSCHEMATC
