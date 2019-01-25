@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "Citizen_sensor"
 Date ""
 Rev "Rocio Rdz."
@@ -122,12 +122,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Female J?
 U 1 1 5C48C861
-P 5030 6830
-F 0 "J?" H 5057 6806 50  0000 L CNN
-F 1 "POM-3044P-R" H 5057 6715 50  0000 L CNN
-F 2 "" H 5030 6830 50  0001 C CNN
-F 3 "~" H 5030 6830 50  0001 C CNN
-	1    5030 6830
+P 4500 7170
+F 0 "J?" H 4527 7146 50  0000 L CNN
+F 1 "POM-3044P-R" H 4527 7055 50  0000 L CNN
+F 2 "" H 4500 7170 50  0001 C CNN
+F 3 "~" H 4500 7170 50  0001 C CNN
+	1    4500 7170
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -994,28 +994,6 @@ F 3 "~" H 1300 4520 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
-U 1 1 5C4AE0AA
-P 2680 4130
-F 0 "R?" H 2750 4176 50  0000 L CNN
-F 1 "2.2k" H 2750 4085 50  0000 L CNN
-F 2 "" V 2610 4130 50  0001 C CNN
-F 3 "~" H 2680 4130 50  0001 C CNN
-	1    2680 4130
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C4AE188
-P 2960 4130
-F 0 "R?" H 3030 4176 50  0000 L CNN
-F 1 "2.2k" H 3030 4085 50  0000 L CNN
-F 2 "" V 2890 4130 50  0001 C CNN
-F 3 "~" H 2960 4130 50  0001 C CNN
-	1    2960 4130
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5C4AE8E4
 P 1300 4700
@@ -1081,17 +1059,6 @@ F 3 "" H 1720 4320 50  0001 C CNN
 	1    1720 4320
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C4B21B1
-P 2820 3860
-F 0 "#PWR?" H 2820 3710 50  0001 C CNN
-F 1 "+3.3V" H 2835 4033 50  0000 C CNN
-F 2 "" H 2820 3860 50  0001 C CNN
-F 3 "" H 2820 3860 50  0001 C CNN
-	1    2820 3860
-	1    0    0    -1  
-$EndComp
 Text Label 3180 4420 0    50   ~ 0
 SDA
 Text Label 3180 4600 0    50   ~ 0
@@ -1130,15 +1097,6 @@ Wire Wire Line
 Connection ~ 2960 4600
 Wire Wire Line
 	2960 4600 3180 4600
-Wire Wire Line
-	2960 3980 2960 3860
-Wire Wire Line
-	2960 3860 2820 3860
-Wire Wire Line
-	2680 3980 2680 3860
-Wire Wire Line
-	2680 3860 2820 3860
-Connection ~ 2820 3860
 Text Notes 970  3970 0    50   ~ 0
 7-bit Unshifted I2C Address 0x10
 Wire Notes Line
@@ -1369,4 +1327,84 @@ Wire Wire Line
 Connection ~ 4170 4360
 Text Label 5100 4440 2    50   ~ 0
 SDO
+$Comp
+L Device:R R?
+U 1 1 5C54F2FC
+P 880 6800
+F 0 "R?" H 950 6846 50  0000 L CNN
+F 1 "10" H 950 6755 50  0000 L CNN
+F 2 "" V 810 6800 50  0001 C CNN
+F 3 "~" H 880 6800 50  0001 C CNN
+	1    880  6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C54F3F8
+P 2860 6770
+F 0 "C?" H 2952 6816 50  0000 L CNN
+F 1 "1uf" H 2952 6725 50  0000 L CNN
+F 2 "" H 2860 6770 50  0001 C CNN
+F 3 "~" H 2860 6770 50  0001 C CNN
+	1    2860 6770
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 6600 2860 6600
+Wire Wire Line
+	2860 6600 2860 6670
+Wire Wire Line
+	1150 6600 880  6600
+Wire Wire Line
+	880  6600 880  6650
+$Comp
+L power:GND #PWR?
+U 1 1 5C55D89B
+P 880 7010
+F 0 "#PWR?" H 880 6760 50  0001 C CNN
+F 1 "GND" H 885 6837 50  0000 C CNN
+F 2 "" H 880 7010 50  0001 C CNN
+F 3 "" H 880 7010 50  0001 C CNN
+	1    880  7010
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C55D8FD
+P 2860 6980
+F 0 "#PWR?" H 2860 6730 50  0001 C CNN
+F 1 "GND" H 2865 6807 50  0000 C CNN
+F 2 "" H 2860 6980 50  0001 C CNN
+F 3 "" H 2860 6980 50  0001 C CNN
+	1    2860 6980
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C55E046
+P 590 6790
+F 0 "R?" H 660 6836 50  0000 L CNN
+F 1 "39" H 660 6745 50  0000 L CNN
+F 2 "" V 520 6790 50  0001 C CNN
+F 3 "~" H 590 6790 50  0001 C CNN
+	1    590  6790
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324 U?
+U 1 1 5C55E851
+P 4620 6680
+F 0 "U?" H 4620 7047 50  0000 C CNN
+F 1 "LM324" H 4620 6956 50  0000 C CNN
+F 2 "" H 4570 6780 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4670 6880 50  0001 C CNN
+	1    4620 6680
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5610 5510 880  180 
+U 5C560DC9
+F0 "Sheetsound" 50
+F1 "sensorsound.sch" 50
+$EndSheet
 $EndSCHEMATC
