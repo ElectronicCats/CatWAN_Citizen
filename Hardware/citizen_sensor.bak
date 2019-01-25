@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "Citizen_sensor"
 Date ""
 Rev "Rocio Rdz."
@@ -117,17 +117,6 @@ F 2 "MICS_10-SMD" H 1800 6200 50  0001 L BNN
 F 3 "None" H 1800 6200 50  0001 L BNN
 F 4 "None" H 1800 6200 50  0001 L BNN "Field5"
 	1    1850 6500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Female J?
-U 1 1 5C48C861
-P 5030 6830
-F 0 "J?" H 5057 6806 50  0000 L CNN
-F 1 "POM-3044P-R" H 5057 6715 50  0000 L CNN
-F 2 "" H 5030 6830 50  0001 C CNN
-F 3 "~" H 5030 6830 50  0001 C CNN
-	1    5030 6830
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1327,4 +1316,73 @@ Wire Wire Line
 Connection ~ 4170 4360
 Text Label 5100 4440 2    50   ~ 0
 SDO
+$Comp
+L Device:R R?
+U 1 1 5C54F2FC
+P 880 6800
+F 0 "R?" H 950 6846 50  0000 L CNN
+F 1 "10" H 950 6755 50  0000 L CNN
+F 2 "" V 810 6800 50  0001 C CNN
+F 3 "~" H 880 6800 50  0001 C CNN
+	1    880  6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5C54F3F8
+P 2860 6770
+F 0 "C?" H 2952 6816 50  0000 L CNN
+F 1 "1uf" H 2952 6725 50  0000 L CNN
+F 2 "" H 2860 6770 50  0001 C CNN
+F 3 "~" H 2860 6770 50  0001 C CNN
+	1    2860 6770
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 6600 2860 6600
+Wire Wire Line
+	2860 6600 2860 6670
+Wire Wire Line
+	1150 6600 880  6600
+Wire Wire Line
+	880  6600 880  6650
+$Comp
+L power:GND #PWR?
+U 1 1 5C55D89B
+P 880 7010
+F 0 "#PWR?" H 880 6760 50  0001 C CNN
+F 1 "GND" H 885 6837 50  0000 C CNN
+F 2 "" H 880 7010 50  0001 C CNN
+F 3 "" H 880 7010 50  0001 C CNN
+	1    880  7010
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C55D8FD
+P 2860 6980
+F 0 "#PWR?" H 2860 6730 50  0001 C CNN
+F 1 "GND" H 2865 6807 50  0000 C CNN
+F 2 "" H 2860 6980 50  0001 C CNN
+F 3 "" H 2860 6980 50  0001 C CNN
+	1    2860 6980
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C55E046
+P 590 6790
+F 0 "R?" H 660 6836 50  0000 L CNN
+F 1 "39" H 660 6745 50  0000 L CNN
+F 2 "" V 520 6790 50  0001 C CNN
+F 3 "~" H 590 6790 50  0001 C CNN
+	1    590  6790
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5610 5510 880  180 
+U 5C560DC9
+F0 "Sheetsound" 50
+F1 "sensorsound.sch" 50
+$EndSheet
 $EndSCHEMATC

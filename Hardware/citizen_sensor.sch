@@ -120,17 +120,6 @@ F 4 "None" H 1800 6200 50  0001 L BNN "Field5"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J?
-U 1 1 5C48C861
-P 4500 7170
-F 0 "J?" H 4527 7146 50  0000 L CNN
-F 1 "POM-3044P-R" H 4527 7055 50  0000 L CNN
-F 2 "" H 4500 7170 50  0001 C CNN
-F 3 "~" H 4500 7170 50  0001 C CNN
-	1    4500 7170
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C?
 U 1 1 5C48E530
 P 9600 1800
@@ -1388,17 +1377,6 @@ F 1 "39" H 660 6745 50  0000 L CNN
 F 2 "" V 520 6790 50  0001 C CNN
 F 3 "~" H 590 6790 50  0001 C CNN
 	1    590  6790
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM324 U?
-U 1 1 5C55E851
-P 4620 6680
-F 0 "U?" H 4620 7047 50  0000 C CNN
-F 1 "LM324" H 4620 6956 50  0000 C CNN
-F 2 "" H 4570 6780 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4670 6880 50  0001 C CNN
-	1    4620 6680
 	1    0    0    -1  
 $EndComp
 $Sheet
