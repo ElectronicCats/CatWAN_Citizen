@@ -1072,20 +1072,6 @@ Wire Wire Line
 	1720 4700 1720 4600
 Wire Wire Line
 	1720 4600 1810 4600
-Wire Wire Line
-	2610 4420 2680 4420
-Wire Wire Line
-	2610 4600 2960 4600
-Wire Wire Line
-	2680 4280 2680 4420
-Connection ~ 2680 4420
-Wire Wire Line
-	2680 4420 3180 4420
-Wire Wire Line
-	2960 4280 2960 4600
-Connection ~ 2960 4600
-Wire Wire Line
-	2960 4600 3180 4600
 Text Notes 970  3970 0    50   ~ 0
 7-bit Unshifted I2C Address 0x10
 Wire Notes Line
@@ -1385,4 +1371,8 @@ U 5C560DC9
 F0 "Sheetsound" 50
 F1 "sensorsound.sch" 50
 $EndSheet
+Wire Wire Line
+	2610 4600 3180 4600
+Wire Wire Line
+	2610 4420 3180 4420
 $EndSCHEMATC

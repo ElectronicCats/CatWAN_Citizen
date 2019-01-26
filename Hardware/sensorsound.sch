@@ -167,17 +167,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4800 4020 50  0001 C CNN
 	5    4750 3820
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5C56E0A0
-P 4650 3520
-F 0 "#PWR?" H 4650 3370 50  0001 C CNN
-F 1 "VCC" H 4667 3693 50  0000 C CNN
-F 2 "" H 4650 3520 50  0001 C CNN
-F 3 "" H 4650 3520 50  0001 C CNN
-	1    4650 3520
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5140 2770 4860 2770
 Wire Wire Line
@@ -297,7 +286,7 @@ F 3 "~" H 9690 3820 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text GLabel 9910 3820 2    50   Input ~ 0
-ENVELOPE
+ENVOL
 $Comp
 L Device:C_Small C?
 U 1 1 5C586A5E
@@ -373,39 +362,6 @@ F 1 "GND" H 8435 4267 50  0000 C CNN
 F 2 "" H 8430 4440 50  0001 C CNN
 F 3 "" H 8430 4440 50  0001 C CNN
 	1    8430 4440
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5C58E2EA
-P 2910 3170
-F 0 "#PWR?" H 2910 3020 50  0001 C CNN
-F 1 "VCC" H 2927 3343 50  0000 C CNN
-F 2 "" H 2910 3170 50  0001 C CNN
-F 3 "" H 2910 3170 50  0001 C CNN
-	1    2910 3170
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5C58E39C
-P 3930 3170
-F 0 "#PWR?" H 3930 3020 50  0001 C CNN
-F 1 "VCC" H 3947 3343 50  0000 C CNN
-F 2 "" H 3930 3170 50  0001 C CNN
-F 3 "" H 3930 3170 50  0001 C CNN
-	1    3930 3170
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5C58E827
-P 1460 3620
-F 0 "#PWR?" H 1460 3470 50  0001 C CNN
-F 1 "VCC" H 1477 3793 50  0000 C CNN
-F 2 "" H 1460 3620 50  0001 C CNN
-F 3 "" H 1460 3620 50  0001 C CNN
-	1    1460 3620
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -520,4 +476,48 @@ Wire Wire Line
 Connection ~ 9430 3820
 Wire Wire Line
 	9840 3820 9910 3820
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C6152D9
+P 1460 3620
+F 0 "#PWR?" H 1460 3470 50  0001 C CNN
+F 1 "+3.3V" H 1475 3793 50  0000 C CNN
+F 2 "" H 1460 3620 50  0001 C CNN
+F 3 "" H 1460 3620 50  0001 C CNN
+	1    1460 3620
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C615319
+P 2910 3170
+F 0 "#PWR?" H 2910 3020 50  0001 C CNN
+F 1 "+3.3V" H 2925 3343 50  0000 C CNN
+F 2 "" H 2910 3170 50  0001 C CNN
+F 3 "" H 2910 3170 50  0001 C CNN
+	1    2910 3170
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C615352
+P 3930 3170
+F 0 "#PWR?" H 3930 3020 50  0001 C CNN
+F 1 "+3.3V" H 3945 3343 50  0000 C CNN
+F 2 "" H 3930 3170 50  0001 C CNN
+F 3 "" H 3930 3170 50  0001 C CNN
+	1    3930 3170
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C61538B
+P 4650 3520
+F 0 "#PWR?" H 4650 3370 50  0001 C CNN
+F 1 "+3.3V" H 4665 3693 50  0000 C CNN
+F 2 "" H 4650 3520 50  0001 C CNN
+F 3 "" H 4650 3520 50  0001 C CNN
+	1    4650 3520
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
