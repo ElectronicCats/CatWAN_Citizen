@@ -1362,7 +1362,7 @@ F 3 "~" H 1040 6380 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 5400 6340 880  180 
+S 5460 6270 880  180 
 U 5C560DC9
 F0 "Sheetsound" 50
 F1 "sensorsound.sch" 50
@@ -1392,4 +1392,8 @@ Text Label 7300 1900 2    50   ~ 0
 SCL
 Text Label 7300 2600 2    50   ~ 0
 CS_
+Text GLabel 7300 1970 0    50   Input ~ 0
+ENVOL
+Wire Wire Line
+	7300 1970 7300 2000
 $EndSCHEMATC

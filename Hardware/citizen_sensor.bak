@@ -1189,7 +1189,7 @@ Wire Notes Line
 Text Label 6660 4360 0    50   ~ 0
 SDA
 Text Label 6660 4440 0    50   ~ 0
-SCK
+SCL
 Wire Wire Line
 	5740 4200 5800 4200
 Wire Wire Line
@@ -1386,4 +1386,10 @@ Wire Wire Line
 	8700 1200 8930 1200
 Wire Wire Line
 	8930 1200 8930 1220
+Text Label 7300 1800 2    50   ~ 0
+SDA
+Text Label 7300 1900 2    50   ~ 0
+SCL
+Text Label 7300 2600 2    50   ~ 0
+CS_
 $EndSCHEMATC
