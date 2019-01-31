@@ -1023,228 +1023,23 @@ Wire Notes Line
 	3730 5120 3730 3600
 Text Notes 3760 3690 0    50   ~ 0
 Atmospheric sensor
-$Comp
-L Device:C_Small C?
-U 1 1 5C4A5D99
-P 4170 4730
-F 0 "C?" H 4078 4684 50  0000 R CNN
-F 1 "0.1uf" H 4078 4775 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4170 4730 50  0001 C CNN
-F 3 "~" H 4170 4730 50  0001 C CNN
-	1    4170 4730
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5C4A5E5F
-P 4530 4730
-F 0 "C?" H 4438 4684 50  0000 R CNN
-F 1 "0.1uf" H 4438 4775 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4530 4730 50  0001 C CNN
-F 3 "~" H 4530 4730 50  0001 C CNN
-	1    4530 4730
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C4A5F0E
-P 5920 3960
-F 0 "R?" H 5990 4006 50  0000 L CNN
-F 1 "4.7K" H 5990 3915 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5850 3960 50  0001 C CNN
-F 3 "~" H 5920 3960 50  0001 C CNN
-	1    5920 3960
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C4A5FBC
-P 6210 3960
-F 0 "R?" H 6280 4006 50  0000 L CNN
-F 1 "4.7K" H 6280 3915 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6140 3960 50  0001 C CNN
-F 3 "~" H 6210 3960 50  0001 C CNN
-	1    6210 3960
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5C4A603A
-P 6510 3960
-F 0 "R?" H 6580 4006 50  0000 L CNN
-F 1 "4.7K" H 6580 3915 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6440 3960 50  0001 C CNN
-F 3 "~" H 6510 3960 50  0001 C CNN
-	1    6510 3960
-	1    0    0    -1  
-$EndComp
-$Comp
-L electroniccats:BME280 U?
-U 1 1 5C4C7CBD
-P 5420 4360
-F 0 "U?" H 5420 4736 50  0000 C CNN
-F 1 "BME280" H 5420 4645 50  0000 C CNN
-F 2 "" H 5420 4360 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 5420 4360 50  0001 C CNN
-	1    5420 4360
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C4D5F44
-P 4880 4900
-F 0 "#PWR?" H 4880 4650 50  0001 C CNN
-F 1 "GND" H 4885 4727 50  0000 C CNN
-F 2 "" H 4880 4900 50  0001 C CNN
-F 3 "" H 4880 4900 50  0001 C CNN
-	1    4880 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C4D5FA6
-P 5800 4900
-F 0 "#PWR?" H 5800 4650 50  0001 C CNN
-F 1 "GND" H 5805 4727 50  0000 C CNN
-F 2 "" H 5800 4900 50  0001 C CNN
-F 3 "" H 5800 4900 50  0001 C CNN
-	1    5800 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C4D6119
-P 4530 4890
-F 0 "#PWR?" H 4530 4640 50  0001 C CNN
-F 1 "GND" H 4535 4717 50  0000 C CNN
-F 2 "" H 4530 4890 50  0001 C CNN
-F 3 "" H 4530 4890 50  0001 C CNN
-	1    4530 4890
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C4D6174
-P 4170 4890
-F 0 "#PWR?" H 4170 4640 50  0001 C CNN
-F 1 "GND" H 4175 4717 50  0000 C CNN
-F 2 "" H 4170 4890 50  0001 C CNN
-F 3 "" H 4170 4890 50  0001 C CNN
-	1    4170 4890
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	470  5120 6970 5120
-Text Label 6660 4360 0    50   ~ 0
+Text Label 5390 4340 2    50   ~ 0
 SDA
-Text Label 6660 4440 0    50   ~ 0
+Text Label 5390 4240 2    50   ~ 0
 SCL
-Wire Wire Line
-	5740 4200 5800 4200
-Wire Wire Line
-	5800 4200 5800 4900
-Wire Wire Line
-	5100 4280 4880 4280
-Wire Wire Line
-	4880 4280 4880 4440
-Wire Wire Line
-	4530 4830 4530 4890
-Wire Wire Line
-	4170 4830 4170 4890
-Wire Wire Line
-	5100 4360 4170 4360
-Wire Wire Line
-	4170 4360 4170 4630
-Wire Wire Line
-	5100 4200 4530 4200
-Wire Wire Line
-	4530 4200 4530 4630
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C50088E
-P 6070 3740
-F 0 "#PWR?" H 6070 3590 50  0001 C CNN
-F 1 "+3.3V" H 6230 3790 50  0000 C CNN
-F 2 "" H 6070 3740 50  0001 C CNN
-F 3 "" H 6070 3740 50  0001 C CNN
-	1    6070 3740
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C5009F4
-P 6510 3730
-F 0 "#PWR?" H 6510 3580 50  0001 C CNN
-F 1 "+3.3V" H 6670 3780 50  0000 C CNN
-F 2 "" H 6510 3730 50  0001 C CNN
-F 3 "" H 6510 3730 50  0001 C CNN
-	1    6510 3730
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5920 3810 5920 3770
-Wire Wire Line
-	5920 3770 6070 3770
-Wire Wire Line
-	6210 3770 6210 3810
-Wire Wire Line
-	6070 3740 6070 3770
-Connection ~ 6070 3770
-Wire Wire Line
-	6070 3770 6210 3770
-Wire Wire Line
-	6510 3730 6510 3810
-Text Label 6660 4280 0    50   ~ 0
-CS_
-Wire Wire Line
-	5740 4280 6510 4280
-Wire Wire Line
-	5740 4360 5920 4360
-Wire Wire Line
-	5740 4440 6210 4440
-Wire Wire Line
-	5920 4110 5920 4360
-Connection ~ 5920 4360
-Wire Wire Line
-	5920 4360 6660 4360
-Wire Wire Line
-	6210 4110 6210 4440
-Connection ~ 6210 4440
-Wire Wire Line
-	6210 4440 6660 4440
-Wire Wire Line
-	6510 4110 6510 4280
-Connection ~ 6510 4280
-Wire Wire Line
-	6510 4280 6660 4280
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5C535733
-P 4530 3950
-F 0 "#PWR?" H 4530 3800 50  0001 C CNN
-F 1 "+3.3V" H 4690 4000 50  0000 C CNN
-F 2 "" H 4530 3950 50  0001 C CNN
-F 3 "" H 4530 3950 50  0001 C CNN
-	1    4530 3950
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5C535856
-P 4170 3950
-F 0 "#PWR?" H 4170 3800 50  0001 C CNN
-F 1 "+3.3V" H 4330 4000 50  0000 C CNN
-F 2 "" H 4170 3950 50  0001 C CNN
-F 3 "" H 4170 3950 50  0001 C CNN
-	1    4170 3950
+P 5120 3960
+F 0 "#PWR?" H 5120 3810 50  0001 C CNN
+F 1 "+3.3V" H 5280 4010 50  0000 C CNN
+F 2 "" H 5120 3960 50  0001 C CNN
+F 3 "" H 5120 3960 50  0001 C CNN
+	1    5120 3960
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4530 4200 4530 3950
-Connection ~ 4530 4200
-Wire Wire Line
-	4170 4360 4170 3950
-Connection ~ 4170 4360
 $Comp
 L Device:R R?
 U 1 1 5C54F2FC
@@ -1346,11 +1141,6 @@ Wire Wire Line
 Text Notes 4900 4900 0    50   ~ 0
 SDO- GND ADDRESS 0X76\nSDO- VDIO ADDRESS 0X77\n\n\n
 Wire Wire Line
-	5100 4440 4880 4440
-Connection ~ 4880 4440
-Wire Wire Line
-	4880 4440 4880 4900
-Wire Wire Line
 	1660 2640 1970 2640
 Wire Wire Line
 	1970 2870 1970 2970
@@ -1363,4 +1153,34 @@ Wire Wire Line
 	3800 2890 4300 2890
 Wire Wire Line
 	3800 3140 3800 3210
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5C547954
+P 5590 4140
+F 0 "J?" H 5618 4116 50  0000 L CNN
+F 1 "BME280" H 5618 4025 50  0000 L CNN
+F 2 "" H 5590 4140 50  0001 C CNN
+F 3 "~" H 5590 4140 50  0001 C CNN
+	1    5590 4140
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C54CAD9
+P 5120 4170
+F 0 "#PWR?" H 5120 3920 50  0001 C CNN
+F 1 "GND" H 5125 3997 50  0000 C CNN
+F 2 "" H 5120 4170 50  0001 C CNN
+F 3 "" H 5120 4170 50  0001 C CNN
+	1    5120 4170
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5390 4140 5120 4140
+Wire Wire Line
+	5120 4140 5120 4170
+Wire Wire Line
+	5120 3960 5120 4040
+Wire Wire Line
+	5120 4040 5390 4040
 $EndSCHEMATC
