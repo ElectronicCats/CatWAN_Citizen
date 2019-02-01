@@ -7,9 +7,9 @@ encoding utf-8
 Sheet 1 2
 Title "Citizen_sensor"
 Date ""
-Rev "Rocio Rdz."
+Rev ""
 Comp "Electronic Cats"
-Comment1 ""
+Comment1 "Rocio Rdz."
 Comment2 ""
 Comment3 ""
 Comment4 ""
