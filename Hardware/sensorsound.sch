@@ -20,7 +20,7 @@ U 1 1 5C567CA4
 P 2590 3920
 F 0 "MK1" V 2420 3910 50  0000 L CNN
 F 1 "Microphone" V 2500 3320 50  0000 L CNN
-F 2 "" V 2590 4020 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 2590 4020 50  0001 C CNN
 F 3 "~" V 2590 4020 50  0001 C CNN
 	1    2590 3920
 	1    0    0    -1  
@@ -31,7 +31,7 @@ U 2 1 5C567E62
 P 6570 3920
 F 0 "U7" H 6570 4287 50  0000 C CNN
 F 1 "LM324" H 6570 4196 50  0000 C CNN
-F 2 "" H 6520 4020 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6520 4020 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6620 4120 50  0001 C CNN
 	2    6570 3920
 	1    0    0    1   
@@ -53,7 +53,7 @@ U 4 1 5C568045
 P 9050 3820
 F 0 "U7" H 9050 4187 50  0000 C CNN
 F 1 "LM324" H 9050 4096 50  0000 C CNN
-F 2 "" H 9000 3920 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9000 3920 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 9100 4020 50  0001 C CNN
 	4    9050 3820
 	1    0    0    1   
@@ -141,7 +141,7 @@ U 1 1 5C568D51
 P 4710 2770
 F 0 "RV1" V 4910 2850 50  0000 C CNN
 F 1 "100K GAIN" V 4620 2770 50  0000 C CNN
-F 2 "" H 4710 2770 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4710 2770 50  0001 C CNN
 F 3 "~" H 4710 2770 50  0001 C CNN
 	1    4710 2770
 	0    -1   -1   0   
@@ -162,7 +162,7 @@ U 5 1 5C56D3DC
 P 4750 3820
 F 0 "U7" H 4700 3610 50  0000 L CNN
 F 1 "LM324" H 4700 3540 50  0000 L CNN
-F 2 "" H 4700 3920 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4700 3920 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4800 4020 50  0001 C CNN
 	5    4750 3820
 	1    0    0    -1  
