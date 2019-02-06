@@ -20,8 +20,9 @@ U 1 1 5C478B86
 P 7000 1600
 F 0 "SW1" H 7000 1835 50  0000 C CNN
 F 1 "RST" H 7009 1470 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7000 1600 50  0001 C CNN
-F 3 "" H 7000 1600 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 7000 1600 50  0001 C CNN
+F 3 "https://www.banggood.com/1000Pcs-DC12V-4-Pins-Tact-Tactile-Push-Button-Switch-Momentary-SMD-Switch-5x5x1_5MM-p-1297259.html?rmmds=newArrivals&cur_warehouse=CN" H 7000 1600 50  0001 C CNN
+F 4 "DC12V 4 Pins" H 0   0   50  0001 C CNN "manf#"
 	1    7000 1600
 	1    0    0    -1  
 $EndComp
@@ -44,7 +45,8 @@ P 9080 5000
 F 0 "U6" H 8750 5460 50  0000 C CNN
 F 1 "RFM95W-868S2" H 8590 4400 50  0000 C CNN
 F 2 "Rf:RFM95W" H 5780 6650 50  0001 C CNN
-F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H 5780 6650 50  0001 C CNN
+F 3 "~" H 5780 6650 50  0001 C CNN
+F 4 "RFM95W" H 0   0   50  0001 C CNN "manf#"
 	1    9080 5000
 	1    0    0    -1  
 $EndComp
@@ -79,7 +81,8 @@ P 9860 4380
 F 0 "AE1" H 10000 4421 50  0000 L CNN
 F 1 "Antenna_Shield" H 10000 4330 50  0000 L CNN
 F 2 "Rf:AMPHENOL_901-144" H 9860 4480 50  0001 C CNN
-F 3 "~" H 9860 4480 50  0001 C CNN
+F 3 "https://www.banggood.com/2pcs-RP-SMA-Female-Adapter-PCB-Edge-Mount-Solder-RF-Connector-p-977325.html?akmClientCountry=MX&&cur_warehouse=CN" H 9860 4480 50  0001 C CNN
+F 4 "977325" H 0   0   50  0001 C CNN "manf#"
 	1    9860 4380
 	1    0    0    -1  
 $EndComp
@@ -115,6 +118,7 @@ F 0 "J5" H 10475 2142 50  0000 C CNN
 F 1 "PROG" H 10475 2051 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10425 1925 50  0001 C CNN
 F 3 "~" H 10425 1925 50  0001 C CNN
+F 4 "~" H 0   0   50  0001 C CNN "manf#"
 	1    10425 1925
 	1    0    0    -1  
 $EndComp
@@ -476,9 +480,6 @@ Wire Wire Line
 	2200 1300 2500 1300
 Wire Wire Line
 	2700 1400 2700 1300
-Connection ~ 2700 1300
-Wire Wire Line
-	2700 1300 3000 1300
 Wire Wire Line
 	2700 1600 2700 1800
 Wire Wire Line
@@ -504,8 +505,9 @@ U 1 1 5C4A0368
 P 2500 1050
 F 0 "D1" V 2546 971 50  0000 R CNN
 F 1 "D_Schottky" V 2455 971 50  0000 R CNN
-F 2 "" H 2500 1050 50  0001 C CNN
-F 3 "~" H 2500 1050 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2500 1050 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/308/MBR120VLSFT1-D-1074021.pdf" H 2500 1050 50  0001 C CNN
+F 4 "NRVB120VLSFT1G" V 2500 1050 50  0001 C CNN "manf#"
 	1    2500 1050
 	0    -1   -1   0   
 $EndComp
@@ -561,7 +563,8 @@ P 720 2640
 F 0 "J1" H 640 2315 50  0000 C CNN
 F 1 "BATT" H 640 2406 50  0000 C CNN
 F 2 "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Vertical" H 720 2640 50  0001 C CNN
-F 3 "" H 720 2640 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/324/ItemDetail_1751248-916542.pdf" H 720 2640 50  0001 C CNN
+F 4 "1751248" H 0   0   50  0001 C CNN "manf#"
 	1    720  2640
 	-1   0    0    1   
 $EndComp
@@ -661,10 +664,7 @@ Connection ~ 2510 2940
 Wire Wire Line
 	2920 2640 2510 2640
 Wire Wire Line
-	1660 2640 1660 2610
-Wire Wire Line
 	1970 2670 1970 2640
-Connection ~ 1970 2640
 $Comp
 L power:GND #PWR0122
 U 1 1 5C4AE70D
@@ -964,8 +964,6 @@ ENVOL
 Text Notes 4900 4900 0    50   ~ 0
 SDO- GND ADDRESS 0X76\nSDO- VDIO ADDRESS 0X77\n\n\n
 Wire Wire Line
-	1660 2640 1970 2640
-Wire Wire Line
 	1970 2870 1970 2970
 Wire Wire Line
 	3620 2890 3800 2890
@@ -984,6 +982,7 @@ F 0 "J4" H 5618 4116 50  0000 L CNN
 F 1 "BME280" H 5618 4025 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5590 4140 50  0001 C CNN
 F 3 "~" H 5590 4140 50  0001 C CNN
+F 4 "~" H 0   0   50  0001 C CNN "manf#"
 	1    5590 4140
 	1    0    0    -1  
 $EndComp
@@ -1235,6 +1234,7 @@ F 0 "J3" H 2288 4436 50  0000 L CNN
 F 1 "VEML6075" H 2288 4345 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2260 4460 50  0001 C CNN
 F 3 "~" H 2260 4460 50  0001 C CNN
+F 4 "~" H 0   0   50  0001 C CNN "manf#"
 	1    2260 4460
 	1    0    0    -1  
 $EndComp
@@ -1328,9 +1328,10 @@ L Device:R R20
 U 1 1 5C5BCC63
 P 1190 6400
 F 0 "R20" H 1120 6354 50  0000 R CNN
-F 1 "R" H 1120 6445 50  0000 R CNN
-F 2 "" V 1120 6400 50  0001 C CNN
-F 3 "~" H 1190 6400 50  0001 C CNN
+F 1 "66.5k" H 1120 6445 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1120 6400 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/315/AOA0000C304-1149620.pdf" H 1190 6400 50  0001 C CNN
+F 4 "ERJ-6ENF6652V" H 0   0   50  0001 C CNN "manf#"
 	1    1190 6400
 	-1   0    0    1   
 $EndComp
@@ -1349,16 +1350,25 @@ Connection ~ 1190 6200
 Wire Wire Line
 	1190 6200 1250 6200
 $Comp
-L Device:R R?
+L Device:R R21
 U 1 1 5C5EC363
 P 930 6200
-F 0 "R?" V 1137 6200 50  0000 C CNN
-F 1 "R" V 1046 6200 50  0000 C CNN
-F 2 "" V 860 6200 50  0001 C CNN
-F 3 "~" H 930 6200 50  0001 C CNN
+F 0 "R21" V 1137 6200 50  0000 C CNN
+F 1 "66.5" V 1046 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 860 6200 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/427/dcrcwe3-109170.pdf" H 930 6200 50  0001 C CNN
+F 4 "CRCW080566R5FKEA" H 0   0   50  0001 C CNN "manf#"
 	1    930  6200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	780  6200 730  6200
+Wire Wire Line
+	3000 1300 2700 1300
+Connection ~ 2700 1300
+Wire Wire Line
+	1660 2610 1660 2640
+Wire Wire Line
+	1660 2640 1970 2640
+Connection ~ 1970 2640
 $EndSCHEMATC
