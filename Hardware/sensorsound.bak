@@ -43,7 +43,7 @@ P 4740 3820
 F 0 "U7" H 4750 3560 50  0000 C CNN
 F 1 "LM324" H 4800 3640 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4690 3920 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4790 4020 50  0001 C CNN
+F 3 "" H 4790 4020 50  0001 C CNN
 	1    4740 3820
 	1    0    0    1   
 $EndComp

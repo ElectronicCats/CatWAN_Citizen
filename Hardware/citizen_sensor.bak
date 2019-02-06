@@ -554,7 +554,7 @@ P 720 2640
 F 0 "J1" H 640 2315 50  0000 C CNN
 F 1 "BATT" H 640 2406 50  0000 C CNN
 F 2 "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Vertical" H 720 2640 50  0001 C CNN
-F 3 "~" H 720 2640 50  0001 C CNN
+F 3 "" H 720 2640 50  0001 C CNN
 	1    720  2640
 	-1   0    0    1   
 $EndComp
