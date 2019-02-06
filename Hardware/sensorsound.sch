@@ -19,9 +19,10 @@ L Device:Microphone MK1
 U 1 1 5C567CA4
 P 2590 3920
 F 0 "MK1" V 2420 3910 50  0000 L CNN
-F 1 "Microphone" V 2500 3320 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 2590 4020 50  0001 C CNN
-F 3 "~" V 2590 4020 50  0001 C CNN
+F 1 "Microphone" V 2330 3795 50  0000 L CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-2_1x02_P2.54mm_Horizontal" V 2590 4020 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1660938.pdf" V 2590 4020 50  0001 C CNN
+F 4 "25R4387" H 0   0   50  0001 C CNN "manf#"
 	1    2590 3920
 	1    0    0    -1  
 $EndComp
@@ -32,7 +33,8 @@ P 6570 3920
 F 0 "U7" H 6570 4287 50  0000 C CNN
 F 1 "LM324" H 6570 4196 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6520 4020 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6620 4120 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm324.pdf" H 6620 4120 50  0001 C CNN
+F 4 "LM324DR" H 0   0   50  0001 C CNN "manf#"
 	2    6570 3920
 	1    0    0    1   
 $EndComp
@@ -43,7 +45,8 @@ P 4740 3820
 F 0 "U7" H 4750 3560 50  0000 C CNN
 F 1 "LM324" H 4800 3640 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4690 3920 50  0001 C CNN
-F 3 "" H 4790 4020 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm324.pdf" H 4790 4020 50  0001 C CNN
+F 4 "LM324DR" H 0   0   50  0001 C CNN "manf#"
 	1    4740 3820
 	1    0    0    1   
 $EndComp
@@ -54,7 +57,8 @@ P 9050 3820
 F 0 "U7" H 9050 4187 50  0000 C CNN
 F 1 "LM324" H 9050 4096 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9000 3920 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 9100 4020 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm324.pdf" H 9100 4020 50  0001 C CNN
+F 4 "LM324DR" H 0   0   50  0001 C CNN "manf#"
 	4    9050 3820
 	1    0    0    1   
 $EndComp
@@ -65,7 +69,8 @@ P 2910 3460
 F 0 "R9" H 2980 3506 50  0000 L CNN
 F 1 "2.2K" H 2980 3415 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2840 3460 50  0001 C CNN
-F 3 "~" H 2910 3460 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/427/rcge3-254226.pdf" H 2910 3460 50  0001 C CNN
+F 4 "RCG08052K20JNEA" H 0   0   50  0001 C CNN "manf#"
 	1    2910 3460
 	1    0    0    -1  
 $EndComp
@@ -76,7 +81,8 @@ P 3260 3720
 F 0 "C12" V 3380 3720 50  0000 C CNN
 F 1 "10uF" V 3150 3720 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3260 3720 50  0001 C CNN
-F 3 "~" H 3260 3720 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/445/885012107004-554083.pdf" H 3260 3720 50  0001 C CNN
+F 4 "885012107004" H 0   0   50  0001 C CNN "manf#"
 	1    3260 3720
 	0    -1   -1   0   
 $EndComp
@@ -87,7 +93,8 @@ P 3650 3720
 F 0 "R10" V 3570 3720 50  0000 C CNN
 F 1 "1K" V 3730 3730 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3580 3720 50  0001 C CNN
-F 3 "~" H 3650 3720 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 3650 3720 50  0001 C CNN
+F 4 "ESR10EZPJ102" H 0   0   50  0001 C CNN "manf#"
 	1    3650 3720
 	0    1    1    0   
 $EndComp
@@ -98,7 +105,8 @@ P 3930 3460
 F 0 "R11" H 4000 3506 50  0000 L CNN
 F 1 "10K" H 4000 3415 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3860 3460 50  0001 C CNN
-F 3 "~" H 3930 3460 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 3930 3460 50  0001 C CNN
+F 4 "ESR10EZPJ103" H 0   0   50  0001 C CNN "manf#"
 	1    3930 3460
 	1    0    0    -1  
 $EndComp
@@ -109,7 +117,8 @@ P 3930 4160
 F 0 "R12" H 3860 4114 50  0000 R CNN
 F 1 "10K" H 3860 4205 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3860 4160 50  0001 C CNN
-F 3 "~" H 3930 4160 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 3930 4160 50  0001 C CNN
+F 4 "ESR10EZPJ103" H 0   0   50  0001 C CNN "manf#"
 	1    3930 4160
 	-1   0    0    1   
 $EndComp
@@ -120,7 +129,8 @@ P 4700 3060
 F 0 "R13" V 4790 3060 50  0000 C CNN
 F 1 "100K" V 4610 3060 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4630 3060 50  0001 C CNN
-F 3 "~" H 4700 3060 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/315/AOA0000C304-1149620.pdf" H 4700 3060 50  0001 C CNN
+F 4 "ERJ-6ENF1003V" H 0   0   50  0001 C CNN "manf#"
 	1    4700 3060
 	0    -1   -1   0   
 $EndComp
@@ -131,7 +141,8 @@ P 5340 3820
 F 0 "C13" V 5460 3820 50  0000 C CNN
 F 1 "1uF" V 5220 3820 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5340 3820 50  0001 C CNN
-F 3 "~" H 5340 3820 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/447/UPY-GPHC_X5R_4V-to-50V_25-1131599.pdf" H 5340 3820 50  0001 C CNN
+F 4 "CC0805KKX5R5BB105" H 0   0   50  0001 C CNN "manf#"
 	1    5340 3820
 	0    -1   -1   0   
 $EndComp
@@ -163,7 +174,8 @@ P 4750 3820
 F 0 "U7" H 4700 3610 50  0000 L CNN
 F 1 "LM324" H 4700 3540 50  0000 L CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4700 3920 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4800 4020 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm324.pdf" H 4800 4020 50  0001 C CNN
+F 4 "LM324DR" H 0   0   50  0001 C CNN "manf#"
 	5    4750 3820
 	1    0    0    -1  
 $EndComp
@@ -188,7 +200,8 @@ P 5830 3820
 F 0 "R14" V 5730 3820 50  0000 C CNN
 F 1 "10K" V 5920 3820 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5760 3820 50  0001 C CNN
-F 3 "~" H 5830 3820 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 5830 3820 50  0001 C CNN
+F 4 "ESR10EZPJ103" H 0   0   50  0001 C CNN "manf#"
 	1    5830 3820
 	0    1    1    0   
 $EndComp
@@ -203,7 +216,8 @@ P 6570 3130
 F 0 "R15" V 6460 3130 50  0000 C CNN
 F 1 "22K" V 6660 3130 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6500 3130 50  0001 C CNN
-F 3 "~" H 6570 3130 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/418/NG_DS_9-1773463-9_A-1358566.pdf" H 6570 3130 50  0001 C CNN
+F 4 "CRGP0805F22K" H 0   0   50  0001 C CNN "manf#"
 	1    6570 3130
 	0    1    1    0   
 $EndComp
@@ -237,7 +251,8 @@ P 7530 3920
 F 0 "R16" V 7440 3920 50  0000 C CNN
 F 1 "100" V 7620 3920 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7460 3920 50  0001 C CNN
-F 3 "~" H 7530 3920 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 7530 3920 50  0001 C CNN
+F 4 "ESR10EZPJ101" H 0   0   50  0001 C CNN "manf#"
 	1    7530 3920
 	0    1    1    0   
 $EndComp
@@ -248,7 +263,8 @@ P 7910 4160
 F 0 "C14" H 7818 4114 50  0000 R CNN
 F 1 "10uF" H 7818 4205 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7910 4160 50  0001 C CNN
-F 3 "~" H 7910 4160 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/445/885012107004-554083.pdf" H 7910 4160 50  0001 C CNN
+F 4 "885012107004" H 0   0   50  0001 C CNN "manf#"
 	1    7910 4160
 	-1   0    0    1   
 $EndComp
@@ -259,7 +275,8 @@ P 8430 4160
 F 0 "R17" H 8330 4110 50  0000 C CNN
 F 1 "10K" H 8310 4190 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8360 4160 50  0001 C CNN
-F 3 "~" H 8430 4160 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 8430 4160 50  0001 C CNN
+F 4 "ESR10EZPJ103" H 0   0   50  0001 C CNN "manf#"
 	1    8430 4160
 	-1   0    0    1   
 $EndComp
@@ -270,7 +287,8 @@ P 8980 3330
 F 0 "R18" V 9080 3330 50  0000 C CNN
 F 1 "1K" V 8864 3330 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8910 3330 50  0001 C CNN
-F 3 "~" H 8980 3330 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 8980 3330 50  0001 C CNN
+F 4 "ESR10EZPJ102" H 0   0   50  0001 C CNN "manf#"
 	1    8980 3330
 	0    -1   -1   0   
 $EndComp
@@ -281,7 +299,8 @@ P 9690 3820
 F 0 "R19" V 9770 3820 50  0000 C CNN
 F 1 "100" V 9574 3820 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9620 3820 50  0001 C CNN
-F 3 "~" H 9690 3820 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 9690 3820 50  0001 C CNN
+F 4 "ESR10EZPJ101" H 0   0   50  0001 C CNN "manf#"
 	1    9690 3820
 	0    -1   -1   0   
 $EndComp
@@ -294,7 +313,8 @@ P 1460 3820
 F 0 "C11" H 1552 3866 50  0000 L CNN
 F 1 "1uf" H 1552 3775 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1460 3820 50  0001 C CNN
-F 3 "~" H 1460 3820 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/447/UPY-GPHC_X5R_4V-to-50V_25-1131599.pdf" H 1460 3820 50  0001 C CNN
+F 4 "CC0805KKX5R5BB105" H 0   0   50  0001 C CNN "manf#"
 	1    1460 3820
 	1    0    0    -1  
 $EndComp
