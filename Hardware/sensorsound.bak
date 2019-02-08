@@ -549,8 +549,9 @@ U 1 1 5C5DECA3
 P 1860 3820
 F 0 "C15" H 1952 3866 50  0000 L CNN
 F 1 "0.1uf" H 1952 3775 50  0000 L CNN
-F 2 "" H 1860 3820 50  0001 C CNN
-F 3 "~" H 1860 3820 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1860 3820 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/40/X7RDielectric-777024.pdf" H 1860 3820 50  0001 C CNN
+F 4 "08056C104JAZ2A" H 0   0   50  0001 C CNN "manf#"
 	1    1860 3820
 	1    0    0    -1  
 $EndComp
