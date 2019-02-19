@@ -1,5 +1,7 @@
 # CatWAN Citizen Sensor Board
 
+LoRa Smart city sensor, based on open hardware and free software, generating and sharing real open data on air pollution, acoustics and many more, compatible with LoRa and LoRaWAN.
+
 ## Sensor list
 
 
