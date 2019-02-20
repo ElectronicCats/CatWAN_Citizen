@@ -87,7 +87,7 @@ F 4 "977325" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L electroniccats:MICS-4514 U4
+L citizen_sensor-rescue:MICS-4514-electroniccats U4
 U 1 1 5C48BCB3
 P 3770 5790
 F 0 "U4" H 3770 6257 50  0000 C CNN
@@ -545,7 +545,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 800  2500 900 
 $Comp
-L electroniccats:MCP73831 U2
+L citizen_sensor-rescue:MCP73831-electroniccats U2
 U 1 1 5C49572E
 P 3270 2790
 F 0 "U2" H 3270 3156 50  0000 C CNN
@@ -1271,14 +1271,14 @@ Connection ~ 4620 5590
 Wire Wire Line
 	4620 5590 4620 5690
 $Comp
-L electroniccats:ATSAMD21E18A-MU U8
+L citizen_sensor-rescue:ATSAMD21E18A-MU-electroniccats U8
 U 1 1 5C5C9AE3
 P 8000 2300
 F 0 "U8" H 8000 3667 50  0000 C CNN
 F 1 "ATSAMD21E18A-MU" H 8000 3576 50  0000 C CNN
 F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 8000 2300 50  0001 L BNN
 F 3 "SAMD21E Series 256 KB Flash 32 KB SRAM 48 MHz 32-Bit Microcontroller - QFN-32" H 8000 2300 50  0001 L BNN
-F 4 "ATSAMD21E15B-AUT" H 8000 2300 50  0001 C CNN "manf#"
+F 4 "ATSAMD21E18A-AUT" H 8000 2300 50  0001 C CNN "manf#"
 	1    8000 2300
 	1    0    0    -1  
 $EndComp
