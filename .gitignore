@@ -1,0 +1,8 @@
+
+\.DS_Store
+
+*.dcm
+
+*.bak
+
+Hardware/citizen_sensor\.kicad_pcb-bak
