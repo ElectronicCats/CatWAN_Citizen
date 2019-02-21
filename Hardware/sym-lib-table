@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name citizen_sensor-rescue)(type Legacy)(uri ${KIPRJMOD}/citizen_sensor-rescue.lib)(options "")(descr ""))
+)

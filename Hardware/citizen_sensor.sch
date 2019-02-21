@@ -87,7 +87,7 @@ F 4 "977325" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L citizen_sensor-rescue:MICS-4514-electroniccats U4
+L citizen_sensor-rescue:MICS-4514-electroniccats-citizen_sensor-rescue U4
 U 1 1 5C48BCB3
 P 3770 5790
 F 0 "U4" H 3770 6257 50  0000 C CNN
@@ -545,7 +545,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 800  2500 900 
 $Comp
-L citizen_sensor-rescue:MCP73831-electroniccats U2
+L citizen_sensor-rescue:MCP73831-electroniccats-citizen_sensor-rescue U2
 U 1 1 5C49572E
 P 3270 2790
 F 0 "U2" H 3270 3156 50  0000 C CNN
@@ -1164,30 +1164,6 @@ Text Label 7300 2200 2    50   ~ 0
 ADC_OX
 Text Label 7300 2300 2    50   ~ 0
 ADC_RED
-$Comp
-L Amplifier_Operational:TLC272 U1
-U 1 1 5C64EF5E
-P 2230 7200
-F 0 "U1" H 2230 7567 50  0000 C CNN
-F 1 "TLC2272" H 2230 7476 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2230 7200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 2230 7200 50  0001 C CNN
-F 4 "TLC2272CD" H 2230 7200 50  0001 C CNN "manf#"
-	1    2230 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TLC272 U1
-U 2 1 5C655037
-P 3810 7180
-F 0 "U1" H 3810 7547 50  0000 C CNN
-F 1 "TLC2272" H 3810 7456 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3810 7180 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 3810 7180 50  0001 C CNN
-F 4 "TLC2272CD" H 0   0   50  0001 C CNN "manf#"
-	2    3810 7180
-	1    0    0    -1  
-$EndComp
 Text Label 3340 7080 2    50   ~ 0
 CO2
 Text Label 2880 5990 2    50   ~ 0
@@ -1197,17 +1173,7 @@ NO2
 Text Label 2280 5690 2    50   ~ 0
 NO2
 Wire Wire Line
-	1780 7100 1930 7100
-Wire Wire Line
 	2530 7200 2560 7200
-Wire Wire Line
-	1930 7300 1880 7300
-Wire Wire Line
-	1880 7300 1880 7450
-Wire Wire Line
-	1880 7450 2560 7450
-Wire Wire Line
-	2560 7450 2560 7200
 Connection ~ 2560 7200
 Wire Wire Line
 	2560 7200 2660 7200
@@ -1271,7 +1237,7 @@ Connection ~ 4620 5590
 Wire Wire Line
 	4620 5590 4620 5690
 $Comp
-L citizen_sensor-rescue:ATSAMD21E18A-MU-electroniccats U8
+L citizen_sensor-rescue:ATSAMD21E18A-MU-electroniccats-citizen_sensor-rescue U8
 U 1 1 5C5C9AE3
 P 8000 2300
 F 0 "U8" H 8000 3667 50  0000 C CNN
@@ -1566,4 +1532,70 @@ Wire Wire Line
 Wire Wire Line
 	5380 2690 5160 2690
 Connection ~ 5160 2690
+$Comp
+L Amplifier_Operational:OPA1602 U1
+U 1 1 5C6F3F91
+P 2230 7200
+F 0 "U1" H 2300 7460 50  0000 C CNN
+F 1 "TLC2272" H 2390 7360 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2230 7200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1604.pdf" H 2230 7200 50  0001 C CNN
+F 4 "TLC2272CD" H 2230 7200 50  0001 C CNN "manf#"
+	1    2230 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1780 7100 1930 7100
+Wire Wire Line
+	1880 7300 1930 7300
+$Comp
+L Amplifier_Operational:OPA1602 U1
+U 2 1 5C700814
+P 3810 7180
+F 0 "U1" H 3810 7547 50  0000 C CNN
+F 1 "TLC2272" H 3810 7456 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3810 7180 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1604.pdf" H 3810 7180 50  0001 C CNN
+	2    3810 7180
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA1602 U1
+U 3 1 5C7008B9
+P 2230 7200
+F 0 "U1" H 2188 7246 50  0000 L CNN
+F 1 "TLC2272" H 2188 7155 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2230 7200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1604.pdf" H 2230 7200 50  0001 C CNN
+	3    2230 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0151
+U 1 1 5C709A87
+P 2130 7500
+F 0 "#PWR0151" H 2130 7250 50  0001 C CNN
+F 1 "GND" H 2135 7327 50  0000 C CNN
+F 2 "" H 2130 7500 50  0001 C CNN
+F 3 "" H 2130 7500 50  0001 C CNN
+	1    2130 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1880 7730 2560 7730
+Wire Wire Line
+	2560 7200 2560 7730
+Wire Wire Line
+	1880 7300 1880 7730
+$Comp
+L power:+3.3V #PWR0152
+U 1 1 5C713802
+P 2130 6900
+F 0 "#PWR0152" H 2130 6750 50  0001 C CNN
+F 1 "+3.3V" H 2290 6950 50  0000 C CNN
+F 2 "" H 2130 6900 50  0001 C CNN
+F 3 "" H 2130 6900 50  0001 C CNN
+	1    2130 6900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
