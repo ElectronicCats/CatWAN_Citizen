@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "Sensor sound"
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "CatWAN citizen"
+Date "2019-02-22"
+Rev "0.1v"
+Comp "Electronic Cats"
+Comment1 "Rocio Rodriguez"
+Comment2 "Eduardo Contreras"
 Comment3 ""
 Comment4 ""
 $EndDescr
