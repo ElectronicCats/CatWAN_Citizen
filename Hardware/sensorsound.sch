@@ -152,9 +152,9 @@ U 1 1 5C568D51
 P 4710 2770
 F 0 "RV1" V 4910 2850 50  0000 C CNN
 F 1 "100K GAIN" V 4620 2770 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3386P_Vertical" H 4710 2770 50  0001 C CNN
-F 3 "https://www.mouser.mx/datasheet/2/54/362-776956.pdf" H 4710 2770 50  0001 C CNN
-F 4 "3362P-1-104LF" H 0   0   50  0001 C CNN "manf#"
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4710 2770 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/54/296-776415.pdf" H 4710 2770 50  0001 C CNN
+F 4 "3296W-1-104LF" H 0   0   50  0001 C CNN "manf#"
 	1    4710 2770
 	0    -1   -1   0   
 $EndComp
