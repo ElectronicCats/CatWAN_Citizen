@@ -6,11 +6,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Citizen_sensor"
-Date ""
-Rev ""
+Date "2019-02-22"
+Rev "0.1v"
 Comp "Electronic Cats"
 Comment1 "Rocio Rdz."
-Comment2 ""
+Comment2 "Eduardo Contreras"
 Comment3 ""
 Comment4 ""
 $EndDescr
