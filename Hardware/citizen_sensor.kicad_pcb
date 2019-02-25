@@ -1493,10 +1493,10 @@
       (net 5 /BATT))
     (pad 1 thru_hole rect (at 0 0) (size 2.6 2.6) (drill 1.3) (layers *.Cu *.Mask)
       (net 2 GND))
-    (model ${KISYS3DMOD}/TerminalBlock_4Ucon.3dshapes/TerminalBlock_4Ucon_1x02_P3.50mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model "${KIPRJMOD}/3D/User Library-KF350-2P.STEP"
+      (offset (xyz -2 3.5 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 90))
     )
   )
 
@@ -1564,8 +1564,8 @@
     (pad 6 thru_hole oval (at 3.875 -1.95 270) (size 1.15 1.8) (drill oval 0.55 1.2) (layers *.Cu *.Mask))
     (pad "" np_thru_hole oval (at -2.5 0.8 270) (size 0.8 0.8) (drill 0.8) (layers *.Cu *.Mask))
     (pad "" np_thru_hole oval (at 2.5 0.8 270) (size 0.8 0.8) (drill 0.8) (layers *.Cu *.Mask))
-    (model ${KISYS3DMOD}/Connector_USB.3dshapes/USB_Micro-B_Wuerth_629105150521.wrl
-      (at (xyz 0 0 0))
+    (model "${KIPRJMOD}/3D/629105150521 (rev1).stp"
+      (offset (xyz 0 1 1))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -2912,6 +2912,11 @@
     (pad F smd rect (at -1.27 2.45 180) (size 0.7 2) (layers F.Cu F.Paste F.Mask)
       (net 4 +3V3))
     (pad E smd rect (at -3.45 1.27 270) (size 0.7 2) (layers F.Cu F.Paste F.Mask))
+    (model ${KIPRJMOD}/3D/MICS-4514.STEP
+      (offset (xyz 0 -0.5 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Package_TO_SOT_SMD:SOT-223-3_TabPin2 (layer B.Cu) (tedit 5A02FF57) (tstamp 5C6C7B54)
