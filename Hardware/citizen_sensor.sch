@@ -6,11 +6,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Citizen_sensor"
-Date "2019-02-22"
-Rev "0.1v"
+Date ""
+Rev ""
 Comp "Electronic Cats"
 Comment1 "Rocio Rdz."
-Comment2 "Eduardo Contreras"
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -918,10 +918,10 @@ L Device:R R6
 U 1 1 5C54F2FC
 P 2880 6290
 F 0 "R6" H 2950 6336 50  0000 L CNN
-F 1 "1" H 2950 6245 50  0000 L CNN
+F 1 "47k" H 2950 6245 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2810 6290 50  0001 C CNN
 F 3 "https://www.mouser.mx/datasheet/2/447/PYu-RC_Group_51_RoHS_L_10-1527934.pdf" H 2880 6290 50  0001 C CNN
-F 4 "RC0805FR-071R" H 0   0   50  0001 C CNN "manf#"
+F 4 "CRGP0805F47K" H 0   0   50  0001 C CNN "manf#"
 	1    2880 6290
 	1    0    0    -1  
 $EndComp

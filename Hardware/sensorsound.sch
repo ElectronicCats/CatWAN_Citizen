@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "CatWAN citizen"
-Date "2019-02-22"
-Rev "0.1v"
-Comp "Electronic Cats"
-Comment1 "Rocio Rodriguez"
-Comment2 "Eduardo Contreras"
+Title "Sensor sound"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -21,8 +21,8 @@ P 2590 3920
 F 0 "MK1" V 2420 3910 50  0000 L CNN
 F 1 "Microphone" V 2330 3795 50  0000 L CNN
 F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-2_1x02_P2.54mm_Horizontal" V 2590 4020 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1660938.pdf" V 2590 4020 50  0001 C CNN
-F 4 "ABM-707-RC" H 0   0   50  0001 C CNN "manf#"
+F 3 "https://www.mouser.mx/datasheet/2/334/POM-3044P-R-60075.pdf" V 2590 4020 50  0001 C CNN
+F 4 "POM-3044P-R" H 0   0   50  0001 C CNN "manf#"
 	1    2590 3920
 	1    0    0    -1  
 $EndComp
@@ -152,9 +152,9 @@ U 1 1 5C568D51
 P 4710 2770
 F 0 "RV1" V 4910 2850 50  0000 C CNN
 F 1 "100K GAIN" V 4620 2770 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4710 2770 50  0001 C CNN
-F 3 "https://www.mouser.mx/datasheet/2/54/296-776415.pdf" H 4710 2770 50  0001 C CNN
-F 4 "3296W-1-104LF" H 0   0   50  0001 C CNN "manf#"
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3386P_Vertical" H 4710 2770 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/54/362-776956.pdf" H 4710 2770 50  0001 C CNN
+F 4 "3362P-1-104LF" H 0   0   50  0001 C CNN "manf#"
 	1    4710 2770
 	0    -1   -1   0   
 $EndComp
