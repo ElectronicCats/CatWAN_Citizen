@@ -15,6 +15,7 @@ LoRa Smart city sensor, based on open hardware and free software, generating and
 
 
 ## LICENSE
+Firmware released under an GNU AGPL v3.0 license. See the LICENSE file for more information.
 
 Hardware released under an CERN Open Hardware Licence v1.2. See the LICENSE_HARDWARE file for more information.
 
