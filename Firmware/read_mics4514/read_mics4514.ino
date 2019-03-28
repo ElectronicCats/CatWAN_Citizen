@@ -41,9 +41,9 @@ void setup() {
   pinMode(9,OUTPUT);
   Serial.println("pre heating");
   digitalWrite(9, HIGH);
-  delay (30000);
+  //delay (30000);
   Serial.println("pre heating done");
-  digitalWrite(2, LOW);
+  digitalWrite(9, LOW);
 }
 
 void loop() {
@@ -56,14 +56,13 @@ void loop() {
   vno2=(3.3*no2)/4096;
   //Convert to resist
   rco=47000*((3.3-vco)/vco);//load resistor in red 1ohm
-  rno2=270*((3.3-vno2)/vno2);//load resistor in ox 270ohm
+  rno2=((270*(3.3-vno2))/vno2);//load resistor in ox 270ohm
  //Convert to indicator concentration
   conCO= 47000/rco;
   conNO2= 270/rno2;
   //Calculo de particulas por millon 
-  ppmCO=(-0.116*log(conCO)+0.8102);
-  ppmNO2= ((0.0068*pow(conNO2,2))-(1.2156*conNO2)+59.876);
-
+  ppmCO=(4.4138*pow(conCO,-1.178));
+  ppmNO2= ((-0.0003*(conNO2*conNO2))+(0.1626*conNO2)-0.0217);
   Serial.print("PPM CO");
   Serial.print(ppmCO);
   Serial.print("PPM NO2");
