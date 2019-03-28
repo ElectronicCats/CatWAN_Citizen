@@ -3,9 +3,13 @@
   Based on Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
   PLEASE REFER TO THIS LMIC LIBRARY https://github.com/things-nyc/arduino-lmic
   
-  Example for the TTGO board
-  In this example you can send Ultrasonic sensor information or a temperature 
-  read by the DHT22  
+  Example for the CITIZEN board
+    In this example you can send TEMPERATURE, HUMINIDY AND PRESSURE sensor information
+  read by the BME280 
+    You can send CO and NO2 levels sensor information
+  read by the MICS4514 
+    You can send CO2 levels sensor information
+  read by the CSS811 
   Example
  *******************************************************************************/
 #include <lmic.h>
