@@ -13,21 +13,43 @@
 #include <SPI.h>
 #include <CayenneLPP.h>
 #include <Wire.h>
+#include "Adafruit_CCS811.h"
 
 #include "SparkFunBME280.h"
 
 
 #define _USE_BME_//DEFINE BME280
-#define _USE_CSS_
+//#define _USE_CSS_
 #define _USE_MICS_
 
 #ifdef _USE_BME_ //pregunta si de definio el sensor MICS
   BME280 mySensor; //Uses I2C address 0x76 (jumper closed)
 #endif
 
+#ifdef _USE_CSS_ //pregunta si de definio el sensor MICS
+  Adafruit_CCS811 ccs;
+#endif
+
 #ifdef _USE_MICS_ //pregunta si de definio el sensor MICS
-  const int trigPin = 7;
-  const int echoPin = 8;
+   //analog read
+    int co=0;
+    int no2=0;
+
+   //Value voltaje
+    float vco=0;
+    float vno2=0;
+
+   //Value resistencia
+    float rco=0;
+    float rno2=0;
+
+   //Value Rs/Ro
+    float conCO=0;
+    float conNO2=0;
+
+   //cálculo de ppm 
+    double ppmCO=0;
+    double ppmNO2=0;
 #endif
 
 #define debugSerial Serial
@@ -122,6 +144,30 @@ void setup() {
   mySensor.setI2CAddress(0x76); //Connect to a second sensor
   if(mySensor.beginI2C() == false) Serial.println("Sensor connect failed");
   #endif
+
+    #ifdef _USE_CSS_
+  Serial.println("CCS811 test");
+  pinMode(10, OUTPUT);
+  digitalWrite(10, LOW);
+  
+  if(!ccs.begin()){
+    Serial.println("Failed to start sensor! Please check your wiring.");
+    while(1);
+     //calibrate temperature sensor
+  while(!ccs.available());
+  float temp = ccs.calculateTemperature();
+  ccs.setTempOffset(temp - 25.0);
+  }
+  #endif
+
+  #ifdef _USE_MICS_
+  pinMode(9,OUTPUT);
+  Serial.println("pre heating");
+  digitalWrite(9, HIGH);
+  //delay (30000);
+  Serial.println("pre heating done");
+  digitalWrite(9, LOW);
+  #endif
   
   os_init();
   LMIC_reset();
@@ -196,6 +242,24 @@ void getInfoAndSend() {
     debugSerial.println(pressu,2);
     lpp.addTemperature(chan++,pressu);
   #endif
+
+  #ifdef _USE_CSS_  //Temperature/HUMIDITY/PRESSURE
+    float  CO2= readCO2();
+    debugSerial.print(F("[INFO] Temperature:")); 
+    debugSerial.println(CO2,2);
+    lpp.addTemperature(chan++,CO2);
+  #endif
+
+  #ifdef _USE_MICS_  //Temperature/HUMIDITY/PRESSURE
+    float  CO= readCO();
+    debugSerial.print(F("[INFO] CO ppm:")); 
+    debugSerial.println(CO,2);
+    lpp.addTemperature(chan++,CO);
+    float  no2= readNO2();
+    debugSerial.print(F("[INFO] NO2 ppm:")); 
+    debugSerial.println(no2,2);
+    lpp.addTemperature(chan++,no2);
+  #endif
   
   debugSerial.println(F("[LMIC] Start Radio TX"));
   digitalWrite(LED_BUILTIN, HIGH);
@@ -218,5 +282,41 @@ float readpress(void) {
   float Pressure = mySensor.readFloatPressure();
   debugSerial.println(Pressure);
   return Pressure;
+}
+#endif
+
+#ifdef _USE_CSS_  
+float readCO2(void) {
+  float co2 = ccs.geteCO2();
+  debugSerial.println(co2);
+  return co2;
+}
+#endif
+
+#ifdef _USE_MICS_  
+float readCO(void) {
+  float co=analogRead(A0);
+  //Convert to voltaje
+  float vco=(3.3*co)/4096;
+  //Convert to resist
+  float rco=47000*((3.3-vco)/vco);//load resistor in red 1ohm
+  //Convert to indicator concentration
+  float conCO= 47000/rco;
+  //Calculo de particulas por millon 
+  float ppmCO=(-0.116*log(conCO)+0.8102);
+  debugSerial.println(ppmCO);
+  return ppmCO;
+    }
+  float readNO2(void) {
+  float no2=analogRead(A1);
+  float vno2=(3.3*no2)/4096;
+ //Convert to resist
+  float rno2=270*((3.3-vno2)/vno2);//load resistor in ox 270ohm
+ //Convert to indicator concentration
+  float conNO2= 270/rno2;
+ //Calculo de particulas por millon 
+  float ppmNO2= ((0.0068*pow(conNO2,2))-(1.2156*conNO2)+59.876);
+  debugSerial.println(ppmNO2);
+  return ppmNO2;
 }
 #endif
