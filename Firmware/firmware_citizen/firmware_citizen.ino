@@ -267,7 +267,7 @@ float readCO2(void) {
     //Convert to indicator concentration
     float conCO= 47000/rco;
     //Calculo de particulas por millon 
-    float ppmCO=(-0.116*log(conCO)+0.8102);
+    float ppmCO=(4.4138*pow(conCO,-1.178));
     return ppmCO;
     }
   
@@ -279,7 +279,7 @@ float readCO2(void) {
    //Convert to indicator concentration
     float conNO2= 270/rno2;
    //Calculo de particulas por millon 
-    float ppmNO2= ((0.0068*pow(conNO2,2))-(1.2156*conNO2)+59.876);
+    float ppmNO2= ((-0.0003*(conNO2*conNO2))+(0.1626*conNO2)-0.0217);
   return ppmNO2;
   }
 #endif
