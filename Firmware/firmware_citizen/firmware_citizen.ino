@@ -22,11 +22,12 @@
 #include <Wire.h>
 #include "Adafruit_CCS811.h"
 #include "SparkFunBME280.h"
-
+#include <SparkFun_VEML6075_Arduino_Library.h>
 
 #define _USE_BME_
 //#define _USE_CSS_
 #define _USE_MICS_
+#define _USE_VME_
 
 #ifdef _USE_BME_ 
   BME280 BME; 
@@ -56,6 +57,12 @@
    //cálculo de ppm 
     double ppmCO=0;
     double ppmNO2=0;
+#endif
+
+#ifdef _USE_VME_ 
+  VEML6075 uv; 
+  String UVi;
+  float iUV=0;
 #endif
 
 CayenneLPP lpp(51);
@@ -147,6 +154,14 @@ void setup() {
   Serial.println("[INFO] Pre heating done MICS");
   digitalWrite(9, LOW);
   #endif
+
+    #ifdef _USE_VME_
+  if (!uv.begin())
+  {
+    Serial.println("Unable to communicate with VEML6075.");
+    while (1);
+  }
+  #endif
   
   os_init();
   LMIC_reset();
@@ -223,6 +238,13 @@ void getInfoAndSend() {
     Serial.println(no2,2);
     lpp.addAnalogInput(chan++,no2);
   #endif
+
+    #ifdef _USE_VME_  //Temperature/HUMIDITY/PRESSURE
+    float  UV= readUV();
+    Serial.print("[INFO] UV indice:"); 
+    Serial.println(UV,2);
+    lpp.addAnalogInput(chan++,UV);
+  #endif
   
   Serial.println(F("[LMIC] Start Radio TX"));
   do_send(lpp.getBuffer(), lpp.getSize());
@@ -259,27 +281,36 @@ float readCO2(void) {
 
 #ifdef _USE_MICS_  
   float readCO(void) {
-    float co=analogRead(A0);
+    co=analogRead(A0);
     //Convert to voltaje
-    float vco=(3.3*co)/4096;
+    vco=(3.3*co)/4096;
     //Convert to resist
-    float rco=47000*((3.3-vco)/vco);//load resistor in red 1ohm
+    rco=47000*((3.3-vco)/vco);//load resistor in red 1ohm
     //Convert to indicator concentration
-    float conCO= 47000/rco;
+    conCO= 47000/rco;
     //Calculo de particulas por millon 
-    float ppmCO=(4.4138*pow(conCO,-1.178));
+    ppmCO=(4.4138*pow(conCO,-1.178));
     return ppmCO;
     }
   
   float readNO2(void) {
-    float no2=analogRead(A1);
-    float vno2=(3.3*no2)/4096;
+    no2=analogRead(A1);
+    vno2=(3.3*no2)/4096;
    //Convert to resist
-    float rno2=270*((3.3-vno2)/vno2);//load resistor in ox 270ohm
+    rno2=270*((3.3-vno2)/vno2);//load resistor in ox 270ohm
    //Convert to indicator concentration
-    float conNO2= 270/rno2;
+    conNO2= 270/rno2;
    //Calculo de particulas por millon 
-    float ppmNO2= ((-0.0003*(conNO2*conNO2))+(0.1626*conNO2)-0.0217);
+    ppmNO2= ((-0.0003*(conNO2*conNO2))+(0.1626*conNO2)-0.0217);
   return ppmNO2;
   }
+#endif
+
+#ifdef _USE_VME_  
+ float readUV(void) {
+  UVi=uv.index();
+  iUV=UVi.toInt();
+  Serial.println(iUV);
+  return iUV;
+}
 #endif
