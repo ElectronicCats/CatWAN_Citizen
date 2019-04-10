@@ -288,7 +288,6 @@ float readCO2(void) {
  float readUV(void) {
   UVi=uv.index();
   iUV=UVi.toInt();
-  Serial.println(iUV);
   return iUV;
 }
 #endif
