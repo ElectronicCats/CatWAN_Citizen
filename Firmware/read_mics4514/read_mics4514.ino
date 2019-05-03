@@ -49,8 +49,8 @@ void setup() {
 void loop() {
   
   //Get Sensor Data
-  co=analogRead(A0);
-  no2=analogRead(A1);
+  co=analogRead(A1);
+  no2=analogRead(A2);
   //Convert to voltaje
   vco=(3.3*co)/4096;
   vno2=(3.3*no2)/4096;

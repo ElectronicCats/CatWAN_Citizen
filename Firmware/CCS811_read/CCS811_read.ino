@@ -17,12 +17,14 @@
  ***************************************************************************/
 
 #include "Adafruit_CCS811.h"
+#define Serial SerialUSB
+
 
 Adafruit_CCS811 ccs;
 
 void setup() {
   Serial.begin(9600);
-  
+  while(!Serial);
   Serial.println("CCS811 test");
   pinMode(10, OUTPUT);
   digitalWrite(10, LOW);

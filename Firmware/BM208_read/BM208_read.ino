@@ -12,14 +12,16 @@
 */
 
 #include <Wire.h>
-
 #include "SparkFunBME280.h"
+#define Serial SerialUSB
+
 //BME280 mySensorA; //Uses default I2C address 0x77
 BME280 mySensorB; //Uses I2C address 0x76 (jumper closed)
 
 void setup()
 {
   Serial.begin(9600);
+  while(!Serial);
   Serial.println("Example showing alternate I2C addresses");
 
   Wire.begin();
