@@ -17,8 +17,8 @@
 float filtered;
 float vals[N];
 
-const double dBAnalogQuiet = 8; // envelope - calibrated value from analog input (48 dB equivalent)
-const double dBAnalogModerate = 14;
+const double dBAnalogQuiet = 10; // envelope - calibrated value from analog input (48 dB equivalent)
+const double dBAnalogModerate = 15;
 const double dBAnalogLoud = 30;
 int count;
 
@@ -44,8 +44,8 @@ void setup()
 void loop() 
 {
   int value=0, i;
-  float decibelsValueQuiet = 49;//49.5;//float decibelsValueQuiet = 49.5;
-  float decibelsValueModerate = 65;//65;
+  float decibelsValueQuiet = 55;//49.5;//float decibelsValueQuiet = 49.5;
+  float decibelsValueModerate = 70;//65;
   float decibelsValueLoud = 85;
   float valueDb;
   float sum=0;
