@@ -28,6 +28,7 @@
 //#define _USE_CSS_
 #define _USE_MICS_
 #define _USE_VME_
+#define _USE_SOUND_
 
 #ifdef _USE_BME_ 
   BME280 BME; 
@@ -41,6 +42,31 @@
   VEML6075 uv; 
   String UVi;
   float iUV=0;
+#endif
+
+#ifdef _USE_SOUND_ 
+#define N 5
+  float filtered;
+  float vals[N];
+
+  const double dBAnalogQuiet = 10; // envelope - calibrated value from analog input (48 dB equivalent)
+  const double dBAnalogModerate = 15;
+  const double dBAnalogLoud = 30;
+  int count;
+
+float calculateDecibels(int x, char c)
+{
+  float decibelsCalculated;
+  
+    if (c == 'q')
+      decibelsCalculated = 20 * log10(x/dBAnalogQuiet);
+    if (c == 'm')
+      decibelsCalculated = 20 * log10(x/dBAnalogModerate);
+    if (c == 'l')
+      decibelsCalculated = 20 * log10(x/dBAnalogLoud);  
+      
+  return (decibelsCalculated);
+}
 #endif
 
 CayenneLPP lpp(51);
@@ -225,6 +251,13 @@ void getInfoAndSend() {
     Serial.println(UV,2);
     lpp.addAnalogInput(chan++,UV);
   #endif
+
+   #ifdef _USE_SOUND_  //Temperature/HUMIDITY/PRESSURE
+    float  DB= readDB();
+    Serial.print("[INFO] DB indice:"); 
+    Serial.println(DB,2);
+    lpp.addAnalogInput(chan++,DB);
+  #endif
   
   Serial.println(F("[LMIC] Start Radio TX"));
   do_send(lpp.getBuffer(), lpp.getSize());
@@ -258,7 +291,7 @@ float readCO2(void) {
 
 #ifdef _USE_MICS_  
   float readCO(void) {
-    int co=analogRead(A0);
+    int co=analogRead(A1);
     //Convert to voltaje
     float vco=(3.3*co)/4096;
     //Convert to resist
@@ -271,7 +304,7 @@ float readCO2(void) {
     }
   
   float readNO2(void) {
-    int no2=analogRead(A1);
+    int no2=analogRead(A2);
     float vno2=(3.3*no2)/4096;
    //Convert to resist
     float rno2=270*((3.3-vno2)/vno2);//load resistor in ox 270ohm
@@ -289,5 +322,47 @@ float readCO2(void) {
   UVi=uv.index();
   iUV=UVi.toInt();
   return iUV;
+}
+#endif
+
+#ifdef _USE_SOUND_  
+ float readDB(void) {
+  int value=0, i;
+  float decibelsValueQuiet = 55;//49.5;//float decibelsValueQuiet = 49.5;
+  float decibelsValueModerate = 70;//65;
+  float decibelsValueLoud = 85;
+  float valueDb;
+  float sum=0;
+  
+  value = analogRead(A0);
+  
+  if (value <= 15)
+  {
+    decibelsValueQuiet += calculateDecibels(value, 'q');
+    valueDb = decibelsValueQuiet; 
+  }
+  else if ((value > 15) && ( value < 23) )
+  {
+    decibelsValueModerate += calculateDecibels(value, 'm');
+    valueDb = decibelsValueModerate;
+  }
+  else if(value >= 23)
+  {
+    decibelsValueLoud += calculateDecibels(value, 'l');
+    valueDb = decibelsValueLoud;
+  }
+
+  for (int i = N-1 ; i>0 ; i--)
+  {
+    vals[i]=vals[i-1];  
+  }
+  vals[0]=valueDb;
+  
+  for(int i=0 ; i<N ; i++)
+  {
+    sum=sum+vals[i];
+  }
+  filtered = sum/N;
+  return filtered;
 }
 #endif
