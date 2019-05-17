@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:citizen_sensor-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -942,6 +942,7 @@ S 5460 6270 880  180
 U 5C560DC9
 F0 "Sheetsound" 50
 F1 "sensorsound.sch" 50
+F2 "ENVOL" I L 5460 6350 50 
 $EndSheet
 $Comp
 L Device:C_Small C8
@@ -959,8 +960,6 @@ Text Label 7300 1800 2    50   ~ 0
 SDA
 Text Label 7300 1900 2    50   ~ 0
 SCL
-Text GLabel 7260 1970 0    50   Input ~ 0
-ENVOL
 Text Notes 2320 4930 0    50   ~ 0
 SDO- GND ADDRESS 0X76\nSDO- VDIO ADDRESS 0X77\n\n\n
 Wire Wire Line
@@ -1225,10 +1224,6 @@ Wire Wire Line
 	8800 1400 8800 1600
 Wire Wire Line
 	8700 1300 8800 1300
-Wire Wire Line
-	7260 1970 7300 1970
-Wire Wire Line
-	7300 2000 7300 1970
 Wire Wire Line
 	4620 5520 4620 5590
 Wire Wire Line
@@ -1598,4 +1593,8 @@ F 3 "" H 2130 6900 50  0001 C CNN
 	1    2130 6900
 	1    0    0    -1  
 $EndComp
+Text Label 5460 6350 2    50   ~ 0
+ENVOL
+Text Label 7300 2000 2    50   ~ 0
+ENVOL
 $EndSCHEMATC

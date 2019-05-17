@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:citizen_sensor-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -307,8 +307,6 @@ F 4 "ESR10EZPJ101" H 0   0   50  0001 C CNN "manf#"
 	1    9690 3820
 	0    -1   -1   0   
 $EndComp
-Text GLabel 9910 3820 2    50   Input ~ 0
-ENVOL
 $Comp
 L Device:C_Small C11
 U 1 1 5C586A5E
@@ -581,4 +579,6 @@ Wire Wire Line
 	1860 3620 1860 3720
 Wire Wire Line
 	1860 3920 1860 4020
+Text HLabel 9910 3820 2    50   Input ~ 0
+ENVOL
 $EndSCHEMATC
