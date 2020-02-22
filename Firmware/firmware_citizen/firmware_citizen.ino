@@ -227,22 +227,19 @@ void getInfoAndSend() {
   #endif
 
   #ifdef _USE_CSS_  //Temperature/HUMIDITY/PRESSURE
-    float  CO2= readCO2();
     Serial.print("[INFO] CO2:"); 
-    Serial.println(CO2,2);
-    lpp.addAnalogInput(chan++,CO2);
+    Serial.println(readCO2(),2);
+    lpp.addAnalogInput(chan++,readCO2());
   #endif
 
   #ifdef _USE_MICS_  //Temperature/HUMIDITY/PRESSURE
-    float  CO= readCO();
     Serial.print("[INFO] CO ppm:"); 
-    Serial.println(CO,2);
-    lpp.addAnalogInput(chan++,CO);
-    
-    float  no2= readNO2();
+    Serial.println(readCO(),2);
+    lpp.addAnalogInput(chan++,readCO());
+   
     Serial.print("[INFO] NO2 ppm:"); 
-    Serial.println(no2,2);
-    lpp.addAnalogInput(chan++,no2);
+    Serial.println(readNO2(),2);
+    lpp.addAnalogInput(chan++,readNO2());
   #endif
 
     #ifdef _USE_VME_  //Temperature/HUMIDITY/PRESSURE
@@ -326,7 +323,7 @@ float readCO2(void) {
 
 
 #ifdef _USE_VME_  
- float readUV(void) {
+float readUV(void) {
   UVi=uv.index();
   iUV=UVi.toInt();
   return iUV;
