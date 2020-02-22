@@ -15,9 +15,7 @@
       MAX30105
   Example
  *******************************************************************************/
-#include <lmic.h>
-#include <hal/hal.h>
-#include <SPI.h>
+#include <lorawan.h>
 #include <CayenneLPP.h>
 #include <Wire.h>
 #include "Adafruit_CCS811.h"
@@ -71,64 +69,36 @@ float calculateDecibels(int x, char c)
 
 CayenneLPP lpp(51);
 
-uint8_t NWKSKEY[16] ={0xdf, 0xa9, 0xd5, 0x4a, 0xd2, 0xe6, 0xfa, 0x83, 0x06, 0x2f, 0x5b, 0xc1, 0xa8, 0x1f, 0xe1, 0xd4 };
-uint8_t APPSKEY[16] ={0xf2, 0x51, 0x46, 0xe1, 0x6c, 0x1e, 0xf1, 0x11, 0x92, 0xb6, 0xe9, 0xd6, 0xd8, 0x1b, 0xa1, 0xee };
-uint32_t DEVADDR =0x006ea87b;
+//ABP Credentials 
+const char *devAddr = "00000000";
+const char *nwkSKey = "00000000000000000000000000000000";
+const char *appSKey = "00000000000000000000000000000000";
 
-void os_getArtEui (u1_t* buf) { }
-void os_getDevEui (u1_t* buf) { }
-void os_getDevKey (u1_t* buf) { }
-
-static osjob_t sendjob;//asignar tiempos a trabajos
-
-// Schedule TX every this many seconds (might become longer due to duty
-// cycle limitations).
-const unsigned TX_INTERVAL = 10;
-unsigned long previousMillis = 0;
+unsigned long previousMillis = 0;  // will store last time message sent
+const unsigned long interval = 10000;    // 10 s interval to send message
 
 // Pin mapping for RFM9X
-const lmic_pinmap lmic_pins = {
-  .nss = SS, 
-  .rxtx = LMIC_UNUSED_PIN,
-  .rst = RFM_RST,
-  .dio = {/*dio0*/ RFM_DIO0, /*dio1*/RFM_DIO1, /*dio2*/ RFM_DIO2}
+const sRFM_pins RFM_pins = {
+  .CS = SS,
+  .RST = RFM_RST,
+  .DIO0 = RFM_DIO0,
+  .DIO1 = RFM_DIO1,
+  .DIO2 = RFM_DIO2,
+  .DIO5 = RFM_DIO5,
 };
 
-
-void onEvent (ev_t ev) {
-  switch (ev) {
-    case EV_TXCOMPLETE:
-      Serial.println(F("[LMIC] Radio TX complete (included RX windows)"));
-      if (LMIC.txrxFlags & TXRX_ACK)
-        Serial.println(F("[LMIC] Received ack"));
-      if (LMIC.dataLen) {
-        Serial.print(F("[LMIC] Received "));
-        Serial.print(LMIC.dataLen);
-        Serial.println(F(" bytes of payload"));
-        Serial.write(LMIC.frame + LMIC.dataBeg, LMIC.dataLen);
-      }
-      break;
-
-    default:
-
-      break;
-  }
-}
-
-void do_send(uint8_t *mydata1, uint16_t len) {
-  // Check if there is not a current TX/RX job running
-  if (LMIC.opmode & OP_TXRXPEND) {
-    Serial.println(F("[LMIC] OP_TXRXPEND, not sending"));
-  } else {
-    LMIC_setTxData2(1, mydata1, len, 0);
-  }
-}
 
 void setup() {
   Serial.begin(115200);
   while(!Serial);
   Serial.println(F("[INFO] LoRa Demo Node 1 Demonstration"));
 
+   if(!lora.init()){
+    Serial.println("RFM95 not detected");
+    delay(5000);
+    return;
+  }
+  
   #ifdef _USE_BME_
   Wire.begin();
   BME.setI2CAddress(0x76); //Connect to a second sensor
@@ -143,10 +113,10 @@ void setup() {
   if(!ccs.begin()){
     Serial.println("[INFO] Failed to start sensor CSS811! Please check your wiring.");
     while(1);
-     //calibrate temperature sensor
-  while(!ccs.available());
-  float temp = ccs.calculateTemperature();
-  ccs.setTempOffset(temp - 25.0);
+    //calibrate temperature sensor
+    while(!ccs.available());
+    float temp = ccs.calculateTemperature();
+    ccs.setTempOffset(temp - 25.0);
   }
   #endif
 
@@ -168,40 +138,29 @@ void setup() {
     while (1);
   }
   #endif
-  
-  os_init();
-  LMIC_reset();
 
-  LMIC_setSession (0x1, DEVADDR, NWKSKEY, APPSKEY);
-  
-  for (int channel=0; channel<72; ++channel) {
-      LMIC_disableChannel(channel);
-    }
-     
-      LMIC_enableChannel(48);
-      LMIC_enableChannel(49);
-      LMIC_enableChannel(50);
-      LMIC_enableChannel(51);
-      LMIC_enableChannel(52);
-      LMIC_enableChannel(53);
-      LMIC_enableChannel(54);
-      LMIC_enableChannel(55);
-      LMIC_enableChannel(70);
-  
-  LMIC_setLinkCheckMode(0);
-  LMIC_setAdrMode(false);
-  LMIC_setDrTxpow(DR_SF7, 14); //SF7
+  // Set LoRaWAN Class change CLASS_A or CLASS_C
+  lora.setDeviceClass(CLASS_A);
 
-  previousMillis = millis();
+  // Set Data Rate
+  lora.setDataRate(SF8BW125);
 
+  // set channel to random
+  lora.setChannel(MULTI);
+  
+  // Put ABP Key and DevAddress here
+  lora.setNwkSKey(nwkSKey);
+  lora.setAppSKey(appSKey);
+  lora.setDevAddr(devAddr);
 }
 
 void loop() {
-  if (millis() > previousMillis + TX_INTERVAL * 1000) { //Start Job at every TX_INTERVAL*1000
+  if(millis() - previousMillis > interval) {
     getInfoAndSend();
     previousMillis = millis();
   }
-  os_runloop_once();
+  // Check Lora RX
+  lora.update();
 }
 
 void getInfoAndSend() {
@@ -256,8 +215,8 @@ void getInfoAndSend() {
     lpp.addAnalogInput(chan++,DB);
   #endif
   
-  Serial.println(F("[LMIC] Start Radio TX"));
-  do_send(lpp.getBuffer(), lpp.getSize());
+  Serial.println(F("[LoRa] Start Radio TX"));
+  lora.sendUplink((char*)lpp.getBuffer(), lpp.getSize(), 0);
   }
 
 // hace la funcion si esta definido el objeto del sensor, si no no toma en cuenta para compilar
