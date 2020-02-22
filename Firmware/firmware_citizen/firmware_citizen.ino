@@ -9,10 +9,10 @@
     TEMPERATURE, HUMINIDY AND PRESSURE sensor information read by the BME280 
     CO and NO2 levels sensor informationread by the MICS4514 
     CO2 levels sensor information read by the CSS811 
+    VEML6075
+    Sound Sensor embedded
     TODO:
       MAX30105
-      VEML6075
-      Sound Sensor embedded
   Example
  *******************************************************************************/
 #include <lmic.h>
@@ -25,10 +25,10 @@
 #include <SparkFun_VEML6075_Arduino_Library.h>
 
 #define _USE_BME_
-//#define _USE_CSS_
+#define _USE_CSS_
 #define _USE_MICS_
 #define _USE_VME_
-#define _USE_SOUND_
+//#define _USE_SOUND_
 
 #ifdef _USE_BME_ 
   BME280 BME; 
@@ -126,7 +126,7 @@ void do_send(uint8_t *mydata1, uint16_t len) {
 
 void setup() {
   Serial.begin(115200);
-  //while(!Serial);
+  while(!Serial);
   Serial.println(F("[INFO] LoRa Demo Node 1 Demonstration"));
 
   #ifdef _USE_BME_
@@ -141,7 +141,7 @@ void setup() {
   digitalWrite(10, LOW);
   
   if(!ccs.begin()){
-    Serial.println("[INFO] Failed to start sensor! Please check your wiring.");
+    Serial.println("[INFO] Failed to start sensor CSS811! Please check your wiring.");
     while(1);
      //calibrate temperature sensor
   while(!ccs.available());
@@ -228,7 +228,7 @@ void getInfoAndSend() {
 
   #ifdef _USE_CSS_  //Temperature/HUMIDITY/PRESSURE
     float  CO2= readCO2();
-    Serial.print("[INFO] Temperature:"); 
+    Serial.print("[INFO] CO2:"); 
     Serial.println(CO2,2);
     lpp.addAnalogInput(chan++,CO2);
   #endif
@@ -283,9 +283,17 @@ float readpress(void) {
 
 #ifdef _USE_CSS_  
 float readCO2(void) {
-  float co2 = ccs.geteCO2();
-  Serial.println(co2);
-  return co2;
+    if (ccs.available()) {
+    if (!ccs.readData()) {
+    float co2 = ccs.geteCO2();
+    float tvoc = ccs.getTVOC();
+    return co2;
+    }
+    else {
+      Serial.println("ERROR!");
+      while (1);
+    }
+}
 }
 #endif
 
