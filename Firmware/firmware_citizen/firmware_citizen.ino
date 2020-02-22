@@ -214,6 +214,12 @@ void getInfoAndSend() {
     Serial.println(DB,2);
     lpp.addAnalogInput(chan++,DB);
   #endif
+
+  lpp.addVoltage(chan++,readBattery());
+  // print out the value you read:
+  Serial.print("[INFO] Battery:");
+  Serial.print(readBattery());
+  Serial.println("V");
   
   Serial.println(F("[LoRa] Start Radio TX"));
   lora.sendUplink((char*)lpp.getBuffer(), lpp.getSize(), 0);
@@ -330,3 +336,10 @@ float readUV(void) {
   return filtered;
 }
 #endif
+float readBattery(){
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(A3);
+  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 4.3V):
+  float VBat = sensorValue * (3.7 / 4095.0);
+  return VBat;
+}
