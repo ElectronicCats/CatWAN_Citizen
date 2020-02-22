@@ -132,7 +132,7 @@ void setup() {
   #ifdef _USE_BME_
   Wire.begin();
   BME.setI2CAddress(0x76); //Connect to a second sensor
-  if(BME.beginI2C() == false) Serial.println("Sensor connect failed");
+  if(BME.beginI2C() == false) Serial.println("Sensor BME280 connect failed");
   #endif
 
   #ifdef _USE_CSS_
@@ -290,7 +290,7 @@ float readCO2(void) {
     return co2;
     }
     else {
-      Serial.println("ERROR!");
+      Serial.println("ERROR reading CCS811!");
       while (1);
     }
 }
