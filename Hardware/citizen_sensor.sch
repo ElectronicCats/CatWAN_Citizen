@@ -1,21 +1,20 @@
 EESchema Schematic File Version 4
-LIBS:citizen_sensor-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title "Citizen_sensor"
-Date ""
+Title "CatWAN Citizen"
+Date "2020-02-21"
 Rev ""
 Comp "Electronic Cats"
 Comment1 "Rocio Rdz."
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "Andres Sabas"
 $EndDescr
 $Comp
-L Switch:SW_DPST_x2 SW1
+L citizen_sensor-rescue:SW_DPST_x2-Switch SW1
 U 1 1 5C478B86
 P 7000 1600
 F 0 "SW1" H 7000 1835 50  0000 C CNN
@@ -39,7 +38,7 @@ F 4 "08056C104JAZ2A" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF_AM_FM:RFM95W-868S2 U6
+L citizen_sensor-rescue:RFM95W-868S2-RF_AM_FM U6
 U 1 1 5C48B732
 P 9080 5000
 F 0 "U6" H 8750 5460 50  0000 C CNN
@@ -1373,10 +1372,6 @@ Text Label 4390 4400 2    50   ~ 0
 WAKE
 Text Label 4390 4500 2    50   ~ 0
 INTCSS
-Text Label 4390 4600 2    50   ~ 0
-RESET
-Text Label 6700 1600 2    50   ~ 0
-RESET
 NoConn ~ 4390 4700
 Wire Wire Line
 	4390 4000 4060 4000
@@ -1641,4 +1636,5 @@ Text Label 6200 2000 0    50   ~ 0
 LED_BUILTIN
 Text Label 7300 2900 2    50   ~ 0
 LED_BUILTIN
+NoConn ~ 4390 4600
 $EndSCHEMATC
