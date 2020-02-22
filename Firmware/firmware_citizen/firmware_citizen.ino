@@ -26,6 +26,7 @@
 #define _USE_MICS_
 #define _USE_VME_
 //#define _USE_SOUND_
+//#define DEBUG
 
 #ifdef _USE_BME_ 
   BME280 BME; 
@@ -110,7 +111,9 @@ const sRFM_pins RFM_pins = {
 
 void setup() {
   Serial.begin(115200);
-  while(!Serial);
+  #ifdef DEBUG
+    while(!Serial);
+  #endif
   Serial.println(F("[INFO] LoRa Demo Node 1 Demonstration"));
 
    if(!lora.init()){
