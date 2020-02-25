@@ -382,10 +382,10 @@ float readUV(void) {
   return filtered;
 }
 #endif
-float readBattery(){
+int readBattery(){
   // read the input on analog pin 0:
   int sensorValue = analogRead(A3);
   // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 4.3V):
-  float VBat = sensorValue * (3.7 / 4095.0);
-  return VBat;
+  //float VBat = sensorValue * (3.7 / 4095.0);
+  return sensorValue;
 }
