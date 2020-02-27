@@ -213,13 +213,13 @@ void getInfoAndSend() {
     lpp.addBarometricPressure(chan++,pressu);
   #endif
 
-  #ifdef _USE_CSS_  //Temperature/HUMIDITY/PRESSURE
+  #ifdef _USE_CSS_  //CO2 and TVOC
     Serial.print("[INFO] CO2:"); 
     Serial.println(readCO2(),2);
     lpp.addAnalogInput(chan++,readCO2());
   #endif
 
-  #ifdef _USE_MICS_  //Temperature/HUMIDITY/PRESSURE
+  #ifdef _USE_MICS_  //CO and NO2
     Serial.print("[INFO] CO ppm:"); 
     Serial.println(readCO(),2);
     lpp.addAnalogInput(chan++,readCO());
@@ -235,14 +235,14 @@ void getInfoAndSend() {
     lpp.addAnalogInput(chan++,readUV());
   #endif
 
-   #ifdef _USE_SOUND_  //Temperature/HUMIDITY/PRESSURE
+   #ifdef _USE_SOUND_  //Sound dB
     float  DB= readDB();
     Serial.print("[INFO] DB indice:"); 
     Serial.println(DB,2);
     lpp.addAnalogInput(chan++,DB);
   #endif
 
-  lpp.addVoltage(chan++,readBattery());
+  lpp.addAnalogInput(chan++,readBattery());
   // print out the value you read:
   Serial.print("[INFO] Battery:");
   Serial.print(readBattery());
