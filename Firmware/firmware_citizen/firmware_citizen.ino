@@ -10,8 +10,7 @@
     CO2 levels sensor information read by the CSS811 
     VEML6075
     Sound Sensor embedded
-    TODO:
-      MAX30105
+    
   Example
  *******************************************************************************/
 #include <lorawan.h>
@@ -96,7 +95,7 @@ const char *nwkSKey = "00000000000000000000000000000000";
 const char *appSKey = "00000000000000000000000000000000";
 
 unsigned long previousMillis = 0;  // will store last time message sent
-const unsigned long interval = 10000;    // 10 s interval to send message
+const unsigned long interval = 30000;    // 10 s interval to send message
 
 // Pin mapping for RFM9X
 const sRFM_pins RFM_pins = {
@@ -149,7 +148,6 @@ void setup() {
   Serial.println("[INFO] Pre heating MICS");
   digitalWrite(9, HIGH);
   Serial.println("[INFO] heating MICS");
-  //delay (30000);
   Serial.println("[INFO] Pre heating done MICS");
   digitalWrite(9, LOW);
   #endif
@@ -211,12 +209,16 @@ void getInfoAndSend() {
     Serial.print(F("[INFO] Pressure hPa:")); 
     Serial.println(pressu);
     lpp.addBarometricPressure(chan++,pressu);
+  #else
+    chan=chan+3;
   #endif
 
   #ifdef _USE_CSS_  //CO2 and TVOC
     Serial.print("[INFO] CO2:"); 
     Serial.println(readCO2(),2);
     lpp.addAnalogInput(chan++,readCO2());
+  #else
+    chan++;
   #endif
 
   #ifdef _USE_MICS_  //CO and NO2
@@ -227,12 +229,16 @@ void getInfoAndSend() {
     Serial.print("[INFO] NO2 ppm:"); 
     Serial.println(readNO2(),2);
     lpp.addAnalogInput(chan++,readNO2());
+  #else
+    chan=chan+2;
   #endif
 
     #ifdef _USE_VME_  //Temperature/HUMIDITY/PRESSURE
     Serial.print("[INFO] UV indice:"); 
     Serial.println(readUV(),2);
     lpp.addAnalogInput(chan++,readUV());
+  #else
+    chan++;
   #endif
 
    #ifdef _USE_SOUND_  //Sound dB
@@ -240,15 +246,21 @@ void getInfoAndSend() {
     Serial.print("[INFO] DB indice:"); 
     Serial.println(DB,2);
     lpp.addAnalogInput(chan++,DB);
+   #else
+    chan++;
   #endif
 
-  lpp.addAnalogInput(chan++,readBattery());
+  lpp.addDigitalInput(chan++,readBattery());
   // print out the value you read:
   Serial.print("[INFO] Battery:");
   Serial.print(readBattery());
   Serial.println("V");
   
+  #ifdef DEBUG  //Battery
+  Serial.println(lpp.getSize());
   Serial.println(F("[LoRa] Start Radio TX"));
+  #endif
+  
   lora.sendUplink((char*)lpp.getBuffer(), lpp.getSize(), 0);
   }
 
